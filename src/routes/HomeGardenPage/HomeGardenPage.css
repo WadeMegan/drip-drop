@@ -1,0 +1,65 @@
+.indiv-plant{
+    width:40%;
+    margin-top:20px;
+    margin-bottom:20px;
+    border:1px solid black;
+}
+
+.indiv-plant img {
+    width:100%;
+}
+
+.indiv-plant button {
+    border: 1px solid black;
+    width:100%;
+    padding: 5px;
+    background-color: grey;
+    color:white;
+}
+
+.indiv-plant button:hover {
+    background-color: black;
+    color:white;
+    cursor: pointer;
+}
+
+.your-plants-container{
+    width:100%;
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+}
+
+.directions {
+    color:grey;
+}
+
+.directions a {
+    color: black;
+}
+
+.directions a:hover {
+    color: grey;
+    cursor:pointer;
+}
+
+.search-form{
+    margin-top: 20px;
+}
+
+#search-plants{
+    border:1px solid black;
+}
+
+.search-button{
+    border: 1px solid black;
+    background-color: grey;
+    color:white;
+}
+
+.search-button:hover{
+    background-color: black;
+    color:white;
+    cursor: pointer;
+}

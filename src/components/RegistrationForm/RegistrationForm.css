@@ -1,0 +1,58 @@
+.register-form {
+    border:1px solid black;
+    position:relative;
+    width:75%;
+    padding:20px;
+    margin-top:50px;
+}
+
+.register-form input{
+    border:1px solid grey;
+}
+
+.signin-button{
+    border:1px solid black;
+    position:absolute;
+    top:-20px;
+    left:-1px;
+    height:20px;
+    width:50%;
+}
+
+.signin-button:hover{
+    color:white;
+    background-color:grey;
+    cursor: pointer;
+}
+
+.register-button{
+    border:1px solid black;
+    position:absolute;
+    top:-20px;
+    right:-1px;
+    height:20px;
+    width:50%;
+    color:white;
+    background-color: black;
+}
+
+.register-section{
+    height:100%;
+    width:100%;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-register-button{
+    border: 1px solid black;
+    padding: 5px;
+    background-color: grey;
+    color:white;
+}
+
+.form-register-button:hover {
+    background-color: black;
+    color:white;
+    cursor: pointer;
+}

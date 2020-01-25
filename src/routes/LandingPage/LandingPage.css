@@ -1,0 +1,13 @@
+.get-started {
+    border: 1px solid black;
+    padding: 5px;
+    background-color: grey;
+    color:white;
+  }
+  
+  .get-started:hover {
+    background-color: black;
+    color:white;
+    cursor: pointer;
+  }
+  

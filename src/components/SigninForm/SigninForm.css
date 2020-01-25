@@ -1,0 +1,51 @@
+  .form-signin-button{
+    border: 1px solid black;
+    padding: 5px;
+    background-color: grey;
+    color:white;
+  }
+  
+  .form-signin-button:hover {
+    background-color: black;
+    color:white;
+    cursor: pointer;
+  }
+
+  .signin-form {
+    border:1px solid black;
+    position:relative;
+    width:75%;
+    padding:20px;
+    margin-top:50px;
+  }
+  
+  .signin-form input{
+    border:1px solid grey;
+  }
+  
+  .register-button{
+    border:1px solid black;
+    position:absolute;
+    top:-20px;
+    right:-1px;
+    height:20px;
+    width:50%;
+  }
+  
+  .register-button:hover{
+    color:white;
+    background-color:grey;
+    cursor: pointer;
+  }
+  
+  .signin-button{
+    border:1px solid black;
+    position:absolute;
+    top:-20px;
+    left:-1px;
+    height:20px;
+    width:50%;
+    color:white;
+    background-color: black;
+  }
+  
