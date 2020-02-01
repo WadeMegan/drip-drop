@@ -8,9 +8,10 @@ export default class SigninPage extends Component {
     render() {
         return (
             <section className = 'signin-section'>
-                <SigninForm/>
+                <SigninForm onLogin={this.props.onLogin}/>
             </section>
         )
     }
 
 }
+

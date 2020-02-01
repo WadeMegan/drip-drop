@@ -4,6 +4,10 @@ import './LandingPage.css'
 
 export default class LandingPage extends Component {
 
+    componentWillMount(){
+        
+    }
+
     render() {
         return (
             <section className = 'landing-page'>
