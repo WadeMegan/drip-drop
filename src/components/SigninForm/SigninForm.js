@@ -19,6 +19,9 @@ export default class SigninForm extends Component {
     }
 
     onLoginSuccess = e =>{
+        this.setState({
+            toPlants:true,
+        },()=>{this.props.onLogin()})
         
         const userId = UserService.getUserToken()
 
@@ -31,11 +34,6 @@ export default class SigninForm extends Component {
         PlantApiService.getUsersPlants(userId)
             .then(this.context.setUsersPlants)
             .catch(/*set error in context*/)
-
-
-        this.setState({
-            toPlants:true,
-        },()=>{this.props.onLogin()})
 
     }
 
@@ -69,17 +67,19 @@ export default class SigninForm extends Component {
     }   
 
     render() {
-
+        const {error}=this.state
         if(this.state.toPlants===true){
-            return <Redirect to='/yourplants'/>
+            return <Redirect to='/your-plants'/>
         }
-        const {error} = this.state
         return (
             <form className='signin-form' onSubmit={this.handleSubmitJwtAuth}>
                 <div className='signin-button'>Sign In</div>
                 <Link to="/register">
                     <button className='register-button'>Register</button>
                 </Link>
+                <div role='alert'>
+                    {error && <p>{error}</p>}
+                </div>
                 <div>
                     <label htmlFor="username">Email</label>
                     <input type="text" name='username' id='username' />

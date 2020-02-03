@@ -111,7 +111,7 @@ export default class AllPlantsPage extends Component {
         return (
             <section className='available-plants-section'>
                 <h2>Available Plants</h2>
-                <p className='directions'>Select the plants you'd like us to remind you about. We'll do the rest! When you're done, go ahead and check out <Link to="/yourplants">your plants</Link>.</p> 
+                <p className='directions'>Select the plants you'd like us to remind you about. We'll do the rest! When you're done, go ahead and check out <Link to="/your-plants">your plants</Link>.</p> 
                 <form className='search-form'> 
                     <label htmlFor="search-plants">Search available plants:</label>
                     <input type="text" name='search-plants' id='search-plants' placeholder="zz plant" onChange={this.filterPlants}/>

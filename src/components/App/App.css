@@ -2,11 +2,12 @@
     margin:0;
     padding:0;
     border:0;
+    box-sizing: border-box;
 }
 
 main {
     padding-bottom:50px; /*for footer position*/
-    padding-top:50px;
+    height:100%;
 }
 
 /*for footer position*/
@@ -14,3 +15,4 @@ main {
     position:relative;
     min-height: 100vh;
 }
+

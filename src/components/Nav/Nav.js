@@ -3,10 +3,11 @@ import './Nav.css'
 import TokenService from '../../services/token-service'
 import { Link } from 'react-router-dom'
 import UserService from '../../services/user-service'
+import logo from '../../images/drip-drop-logo.png'
 
 export default class Nav extends Component {
 
-    state ={
+    state = {
         loggedIn: null,
     }
 
@@ -38,7 +39,7 @@ export default class Nav extends Component {
         return(
             <Link
                 onClick={this.handleLogoutClick}
-                to='/'>
+                to='/' className='navLink'>
                 Logout
             </Link>
         )
@@ -47,7 +48,7 @@ export default class Nav extends Component {
     renderLoginLink(){
         return(
             <Link
-                to='/signin'>
+                to='/signin' className='navLink'>
                 Sign in
             </Link>
         )
@@ -56,7 +57,7 @@ export default class Nav extends Component {
     render () {
         return (
            <nav>
-               <h1>Drip Drop</h1> 
+               <img src={logo}></img>
                {TokenService.hasAuthToken()
                 ? this.renderLogoutLink()
                 : this.renderLoginLink()}

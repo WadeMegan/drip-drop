@@ -1,13 +1,35 @@
+.landingPage{
+  background-image: url('../../images/hero2.jpg');
+  background-repeat:no-repeat;
+  background-size:100% 100%;
+  height:500px;
+}
+
 .get-started {
-    border: 1px solid black;
-    padding: 5px;
-    background-color: grey;
-    color:white;
-  }
+  border: 1px solid black;
+  padding: 5px;
+  background-color: grey;
+  color:white;
+  border-radius: 10px;
+}
   
-  .get-started:hover {
-    background-color: black;
-    color:white;
-    cursor: pointer;
-  }
+.get-started:hover {
+  background-color: black;
+  color:white;
+  cursor: pointer;
+}
+
+.landingText{
+  color:#023966;
+  position: absolute;
+  margin-top:110px;
+  right:10%;
+  width:40%;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content:space-evenly;
+  height:350px;
+}
   

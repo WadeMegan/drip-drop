@@ -9,6 +9,8 @@ import SigninPage from '../../routes/SigninPage/SigninPage'
 import AllPlantsPage from '../../routes/AllPlantsPage/AllPlantsPage'
 import HomeGardenPage from '../../routes/HomeGardenPage/HomeGardenPage'
 import dummyStore from '../../store/dummy-store'
+import PrivateRoute from '../../components/Utils/PrivateRoute'
+import PublicOnlyRoute from '../../components/Utils/PublicOnlyRoute'
 
 class App extends Component {
   
@@ -46,20 +48,20 @@ class App extends Component {
                   path={'/'}
                   component={LandingPage}
                 />
-                <Route 
+                <PublicOnlyRoute
                   path={'/register'}
                   component={RegisterPage}
                 />
-                <Route 
+                <PublicOnlyRoute
                   path={'/signin'}
                   render={()=> <SigninPage onLogin={this.handleLogin}/>}
                 />
-                <Route 
+                <PrivateRoute 
                   path={'/plants'}
                   component={AllPlantsPage}
                 />
-                <Route 
-                  path={'/yourplants'}
+                <PrivateRoute 
+                  path={'/your-plants'}
                   component={HomeGardenPage}
                 />
             </Switch>
