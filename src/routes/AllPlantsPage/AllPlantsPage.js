@@ -5,6 +5,7 @@ import PlantItem from '../../components/PlantItem/PlantItem'
 import PlantListContext from '../../contexts/PlantListContext'
 import PlantApiService from '../../services/plant-api-services'
 import UserService from '../../services/user-service'
+import Error from '../../components/Error'
 
 export default class AllPlantsPage extends Component {
     static contextType = PlantListContext
@@ -46,14 +47,14 @@ export default class AllPlantsPage extends Component {
     }*/
 
     componentDidMount=()=>{
-        
+        this.context.clearError()
         const userId = UserService.getUserToken()
 
         if(!this.context.usersPlants.length){
             //fetch all users plants and store in context
             PlantApiService.getUsersPlants(userId)
                 .then(this.context.setUsersPlants)
-                .catch(/*set error in context*/)
+                .catch(this.context.setError)
         }
         
         if(!this.context.plantList.length){
@@ -61,7 +62,7 @@ export default class AllPlantsPage extends Component {
             //fetch all available plants and store in context 
             PlantApiService.getAllPlants()
                 .then(this.context.setPlantList)
-                .catch(/*set error in context*/)
+                .catch(this.context.setError)
             
             
       
@@ -109,6 +110,7 @@ export default class AllPlantsPage extends Component {
     render() {
 
         return (
+            <Error>
             <section className='available-plants-section'>
                 <h2>Available Plants</h2>
                 <p className='directions'>Select the plants you'd like us to remind you about. We'll do the rest! When you're done, go ahead and check out <Link to="/your-plants">your plants</Link>.</p> 
@@ -122,6 +124,7 @@ export default class AllPlantsPage extends Component {
                     : this.renderPlants(this.context.plantList)}
                 </div>
             </section>
+            </Error>
         )
     }
 

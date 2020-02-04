@@ -11,12 +11,13 @@ import HomeGardenPage from '../../routes/HomeGardenPage/HomeGardenPage'
 import dummyStore from '../../store/dummy-store'
 import PrivateRoute from '../../components/Utils/PrivateRoute'
 import PublicOnlyRoute from '../../components/Utils/PublicOnlyRoute'
+import Error from '../../components/Error'
 
 class App extends Component {
   
-  
   state = {
     isLoggedIn: false,
+    hasError: false,
   }
   /*
   setPlants = (data) => {
@@ -28,6 +29,11 @@ class App extends Component {
   componentWillMount(){
     this.setPlants(dummyStore)
   }*/
+
+  static getDerivedStateFromError(error){
+    console.error(error)
+    return {hasError:true}
+  }
 
   handleLogin=()=>{
       this.setState({
@@ -42,6 +48,7 @@ class App extends Component {
         <>
         <Nav isLoggedIn={this.state.isLoggedIn}/>
         <main className='App'>
+            {this.state.hasError && <p>Oops! There was an error!</p>}
             <Switch>
                 <Route 
                   exact 

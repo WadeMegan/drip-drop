@@ -8,10 +8,11 @@ import TokenService from '../../services/token-service'
 import PlantListContext from '../../contexts/PlantListContext'
 import UserService from '../../services/user-service'
 import PlantApiService from '../../services/plant-api-services';
-
+import Error from '../../components/Error'
 
 export default class SigninForm extends Component {
     static contextType = PlantListContext
+
 
     state = {
         toPlants: false,
@@ -28,12 +29,12 @@ export default class SigninForm extends Component {
         //fetch all available plants and store in context 
         PlantApiService.getAllPlants()
             .then(this.context.setPlantList)
-            .catch(/*set error in context*/)
+            .catch(this.context.setError)
         
         //fetch all users plants and store in context
         PlantApiService.getUsersPlants(userId)
             .then(this.context.setUsersPlants)
-            .catch(/*set error in context*/)
+            .catch(this.context.setError)
 
     }
 
@@ -61,13 +62,22 @@ export default class SigninForm extends Component {
                 
             })
             .catch(res=>{
-                this.setState({error:res.error})
+                if(res.error === 'Incorrect email or password'){
+                    this.setState({error:res.error})
+                }
+                else {
+                    this.context.setError(res.error)
+                }        
             })
 
     }   
 
+    componentDidMount(){
+        this.context.clearError()
+    }
+
     render() {
-        const {error}=this.state
+        const {error} =this.state
         if(this.state.toPlants===true){
             return <Redirect to='/your-plants'/>
         }

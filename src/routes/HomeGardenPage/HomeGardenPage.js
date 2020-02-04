@@ -6,6 +6,7 @@ import dummyStore from '../../store/dummy-store'
 import PlantItem from '../../components/PlantItem/PlantItem'
 import PlantApiService from '../../services/plant-api-services'
 import UserService from '../../services/user-service'
+import Error from '../../components/Error'
 
 export default class HomeGardenPage extends Component {
     static contextType = PlantListContext
@@ -36,21 +37,21 @@ export default class HomeGardenPage extends Component {
     }*/
      
     componentDidMount(){
-        
+        this.context.clearError()
         const userId = UserService.getUserToken()
 
         if(!this.context.usersPlants.length){
             //fetch all users plants and store in context
             PlantApiService.getUsersPlants(userId)
                 .then(this.context.setUsersPlants)
-                .catch(/*set error in context*/)
+                .catch(this.context.setError)
         }
         
         if(!this.context.plantList.length){
             //fetch all available plants and store in context 
             PlantApiService.getAllPlants()
                 .then(this.context.setPlantList)
-                .catch(/*set error in context*/)
+                .catch(this.context.setError)
         }
         
         
@@ -62,6 +63,10 @@ export default class HomeGardenPage extends Component {
         
         //const plants = this.usersPlants()
         //this.context.setUsersPlants(plants)
+    }
+
+    componentWillUnmount(){
+        this.context.clearError()
     }
 
     renderPlants=(plants)=>{
@@ -89,6 +94,7 @@ export default class HomeGardenPage extends Component {
     render() {
         
         return (
+            <Error>
             <section className='home-garden-section'>
                 <h2>Your Plants</h2>
                 <p className='directions'>These are the plants we'll be sending you reminders about. Feel free to remove any plants you no longer have. If you'd like to add more to your home garden, see the <Link to="/plants">available plants</Link>.</p> 
@@ -102,6 +108,7 @@ export default class HomeGardenPage extends Component {
                     : this.renderPlants(this.context.usersPlants)}
                 </div>
             </section>
+            </Error>
         )
     }
 

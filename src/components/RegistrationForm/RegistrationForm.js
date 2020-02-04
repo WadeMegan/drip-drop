@@ -2,8 +2,13 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import './RegistrationForm.css'
 import AuthApiService from '../../services/auth-api-service'
+import PlantListContext from '../../contexts/PlantListContext'
+
 
 export default class RegistrationForm extends Component {
+
+    static contextType = PlantListContext
+
     state = {
         error: null
     }
@@ -29,9 +34,18 @@ export default class RegistrationForm extends Component {
                 this.props.onRegistrationSuccess()
             })
             .catch(res=>{
-                this.setState({error:res.error})
+                if(res.error === ('Password must contain one upper case, lower case, number'||'There is already an account associated with this email'||'Password be longer than 8 characters')){
+                    this.setState({error:res.error})
+                }
+                else{
+                    this.context.setError(res.error)
+                }
             })
         
+    }
+
+    componentDidMount(){
+        this.context.clearError()
     }
 
     render() {

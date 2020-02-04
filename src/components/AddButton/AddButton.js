@@ -20,9 +20,9 @@ export default class AddButton extends Component {
                 //fetch all users plants and store in context
                 PlantApiService.getUsersPlants(userId)
                     .then(this.context.setUsersPlants)
-                    .catch(/*set error in context*/)
+                    .catch(this.context.setError)
             })
-            .catch(/*set error in context*/)
+            .catch(this.context.setError)
         
 
 

@@ -15,26 +15,22 @@ const PlantListContext = React.createContext({
     users: [],
     loggedIn: false,
     logOut: ()=>{},
-    logIn: ()=>{}
+    logIn: ()=>{},
+    error: null,
+    setError: ()=>{},
+    clearError: ()=>{},
 })
 export default PlantListContext
 
 export class PlantListProvider extends Component {
     state = {
-        plantList: [],
-        setPlantList: () => {},
         currentUserId: null, 
-        setCurrentUserId: () => {},
+        plantList: [],
         usersPlants: [],
-        setUsersPlants: () => {},
         reminders: [],
-        addNewReminder: () => {},
-        removeReminder:()=>{},
-        setReminders: ()=>{},
         users: [],
         loggedIn: false,
-        logOut: ()=>{},
-        logIn: ()=>{}
+        error: null,
     }
 
     logOut = () =>{
@@ -102,6 +98,15 @@ export class PlantListProvider extends Component {
         console.log(newReminderList)
     }*/
 
+    setError = error => {
+        console.error(error)
+        this.setState({ error })
+    }
+
+    clearError = () => {
+        this.setState({ error: null })
+    }
+
     render (){
         const value = {
             plantList: this.state.plantList,
@@ -118,6 +123,9 @@ export class PlantListProvider extends Component {
             loggedIn: this.state.loggedIn,
             logOut: this.logOut,
             logIn:this.logIn,
+            error: this.state.error,
+            setError: this.setError,
+            clearError: this.clearError,
         }
         return (
             <PlantListContext.Provider value={value}>
