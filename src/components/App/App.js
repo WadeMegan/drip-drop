@@ -12,6 +12,8 @@ import dummyStore from '../../store/dummy-store'
 import PrivateRoute from '../../components/Utils/PrivateRoute'
 import PublicOnlyRoute from '../../components/Utils/PublicOnlyRoute'
 import Error from '../../components/Error'
+const queryString = require('query-string');
+
 
 class App extends Component {
   
@@ -39,6 +41,14 @@ class App extends Component {
       this.setState({
         isLoggedIn:true
       })
+  }
+
+  componentDidMount(){
+    const params = queryString.parse(document.location.search);
+    const redirect = params.redirect; // this would be "abcdefg" if the query was "?redirect=abcdefg"
+    if (document.location.pathname === '/' && redirect) {
+      document.location.assign(`${document.location.origin}/${redirect}`);
+    }
   }
 
   render(){
