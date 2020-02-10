@@ -1,34 +1,12 @@
-.available-plants-section{
-  padding-top:80px;
-}
 
-.indiv-plant{
-    width:40%;
-    margin-top:20px;
-    margin-bottom:20px;
-    border:1px solid black;
-  }
-  
-  .indiv-plant img {
-    width:100%;
-  }
-  
-  .indiv-plant button {
-    border: 1px solid black;
-    width:100%;
-    padding: 5px;
-    background-color: grey;
-    color:white;
-  }
-  
-  .indiv-plant button:hover {
-    background-color: black;
-    color:white;
-    cursor: pointer;
-  }
+.available-plants-section h2{
+  text-align: center;
+  padding-bottom: 15px;
+}
   
   .all-plants-container{
     width:100%;
+    padding:20px;
     display:flex;
     flex-direction: column;
     justify-content:center;
@@ -49,21 +27,66 @@
   }
   
   .search-form{
-    margin-top: 20px;
+
   }
   
   #search-plants{
-    border:1px solid black;
+    border:1px solid grey;
   }
   
-  .search-button{
-    border: 1px solid black;
-    background-color: grey;
-    color:white;
-  }
-  
-  .search-button:hover{
-    background-color: black;
-    color:white;
-    cursor: pointer;
-  }
+
+.switchPagesButton{
+  background-color: #f5d60d;
+  color:black;
+  border-radius: 25px;
+  width:100%;
+  height:50px;
+  color:#041f3c;
+  display:flex;
+}
+
+.pageButton{
+  width:50%;
+  display:flex;
+  align-items:center;
+  justify-content: center;
+}
+
+.notCurrent:hover{
+background-color:#e6c90d;
+cursor: pointer;
+}
+
+.pageButton p, .pageButton{
+  text-decoration: none;
+  color:#041f3c;
+}
+
+
+.availableButton{
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+}
+
+.yourPlantsButton{
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+}
+
+.current{
+  -webkit-box-shadow: inset 1px 1px 10px #d8bd0e;
+  -moz-box-shadow:    inset 1px 1px 10px #d8bd0e;
+  box-shadow:         inset 1px 1px 10px #d8bd0e;
+}
+
+.banner{
+  background: url('../../images/waterBanner.jpg') no-repeat bottom left;
+  background-size:100%;
+  background-repeat:no-repeat;
+  height:150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items:center;
+  padding:20px;
+}

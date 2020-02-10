@@ -1,0 +1,22 @@
+.indiv-plant{
+    width:50%;
+    margin-top:20px;
+  }
+  
+  .indiv-plant img {
+    width:100%;
+  }
+  
+  .indiv-plant button {
+    width:100%;
+    padding: 5px;
+    border-radius:25px;
+    background-color: #041f3c;
+    color:white;
+}
+
+.indiv-plant button:hover{
+  cursor: pointer;
+}
+
+

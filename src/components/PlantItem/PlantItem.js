@@ -75,10 +75,12 @@ export default class PlantItem extends Component {
 
         return (
             <div className='indiv-plant'>
-                <img src={this.props.plant.img} alt={this.props.plant.name}></img>
                 <h3>{this.props.plant.name}</h3>
                 <p>{this.props.plant.watering_directions}</p>
+
+                <img src={this.props.plant.img} alt={this.props.plant.name}></img>
                 {this.checkIfSelected()}
+                
             </div>
         )
     }

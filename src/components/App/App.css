@@ -6,13 +6,13 @@
 }
 
 main {
-    padding-bottom:50px; /*for footer position*/
-    height:100%;
+    margin-top:12vh;
+    padding-bottom:12vh; /*for footer position*/
+    min-height:88vh;
 }
 
 /*for footer position*/
 #root {
     position:relative;
-    min-height: 100vh;
 }
 

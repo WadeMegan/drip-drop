@@ -3,7 +3,7 @@ import './Nav.css'
 import TokenService from '../../services/token-service'
 import { Link } from 'react-router-dom'
 import UserService from '../../services/user-service'
-import logo from '../../images/drip-drop-logo.png'
+import logo from '../../images/logo.png'
 
 export default class Nav extends Component {
 
@@ -57,7 +57,7 @@ export default class Nav extends Component {
     render () {
         return (
            <nav>
-               <img src={logo}></img>
+               <h1>Drip <span><i class="fas fa-tint"></i></span> Drop</h1>
                {TokenService.hasAuthToken()
                 ? this.renderLogoutLink()
                 : this.renderLoginLink()}

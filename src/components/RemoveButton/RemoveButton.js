@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import PlantListContext from '../../contexts/PlantListContext'
 import PlantApiService from '../../services/plant-api-services'
 import UserService from '../../services/user-service'
+import './RemoveButton.css'
 
 export default class RemoveButton extends Component {
     static contextType = PlantListContext
@@ -27,7 +28,7 @@ export default class RemoveButton extends Component {
 
     render () {
         return (
-            <button onClick={this.removeReminder}>
+            <button className='removeButton' onClick={this.removeReminder}>
                 Remove
             </button>
         )

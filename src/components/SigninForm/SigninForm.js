@@ -83,22 +83,22 @@ export default class SigninForm extends Component {
         }
         return (
             <form className='signin-form' onSubmit={this.handleSubmitJwtAuth}>
-                <div className='signin-button'>Sign In</div>
-                <Link to="/register">
-                    <button className='register-button'>Register</button>
-                </Link>
-                <div role='alert'>
-                    {error && <p>{error}</p>}
+                <legend>Welcome Back</legend>
+                <div className='formElements'>
+                    <div role='alert' id='error'>
+                        {error && <p>{error}</p>}
+                    </div>
+                    <div>
+                        <label htmlFor="username">Email</label>
+                        <input type="text" name='username' id='username' />
+                    </div>
+                    <div>
+                        <label htmlFor="password">Password</label>
+                        <input type="password" name='password' id='password' />
+                    </div>
+                    <input className='form-signin-button' type='submit' value='Sign In'/>
+                    <p className='createAccountLink'>New? <Link to='/register'>Create account.</Link></p>
                 </div>
-                <div>
-                    <label htmlFor="username">Email</label>
-                    <input type="text" name='username' id='username' />
-                </div>
-                <div>
-                    <label htmlFor="password">Password</label>
-                    <input type="password" name='password' id='password' />
-                </div>
-                <input className='form-signin-button' type='submit' value='Sign In'/>
             </form>
         )
     }

@@ -95,14 +95,23 @@ export default class HomeGardenPage extends Component {
         
         return (
             <Error>
-            <section className='home-garden-section'>
-                <h2>Your Plants</h2>
-                <p className='directions'>These are the plants we'll be sending you reminders about. Feel free to remove any plants you no longer have. If you'd like to add more to your home garden, see the <Link to="/plants">available plants</Link>.</p> 
-                <form className='search-form'> 
-                    <label htmlFor="search-plants">Search available plants:</label>
-                    <input type="text" name='search-plants' id='search-plants' placeholder="zz plant" onChange={this.filterPlants}/>
-                </form>
+            <section className='usersPlantsSection'>
+                <div className='banner'>
+                    <h2>Your Plants</h2>
+                    <div className='switchPagesButton'>
+                        <Link className='pageButton availableButton notCurrent' to='plants'>
+                            <p className='buttonItem'>Available Plants</p>
+                        </Link>
+                        <div className='pageButton yourPlantsButton current'>
+                            Your Plants
+                        </div>
+                    </div>
+                </div>
                 <div className='your-plants-container'>
+                    <form className='search-form'> 
+                        <label htmlFor="search-plants">Search your plants: </label>
+                        <input type="text" name='search-plants' id='search-plants' placeholder="zz plant" onChange={this.filterPlants}/>
+                    </form>
                     {this.state.isFiltered
                     ? this.renderPlants(this.state.filteredPlants)
                     : this.renderPlants(this.context.usersPlants)}

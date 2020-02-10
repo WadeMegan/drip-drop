@@ -1,7 +1,31 @@
-footer {
-    border: 1px solid black;
-    height: 50px;
+footer {    
+    height: 12vh;
     width: 100%;
     position: absolute;
     bottom:0;
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: space-evenly;
+    color: #041f3c;
+
+}
+
+.socialLinks{
+    display:flex;
+    width:25%;
+    display:flex;
+    justify-content: space-evenly;
+}
+
+.socialLinks li{
+    list-style: none;
+}
+
+.socialLinks i{
+    color: #041f3c;
+}
+
+.socialLinks i:hover{
+    color:grey;
 }

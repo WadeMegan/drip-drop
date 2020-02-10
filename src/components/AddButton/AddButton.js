@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import PlantListContext from '../../contexts/PlantListContext'
 import PlantApiService from '../../services/plant-api-services'
 import UserService from '../../services/user-service'
+import './AddButton.css'
 
 export default class AddButton extends Component {
     static contextType = PlantListContext
@@ -33,7 +34,7 @@ export default class AddButton extends Component {
     render () {
 
         return (
-            <button onClick={this.addReminder}>
+            <button className='addButton' onClick={this.addReminder}>
                 Add
             </button>
         )

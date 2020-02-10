@@ -1,7 +1,11 @@
-  .signin-section{
-    height:100%;
-    width:100%;
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-  }
+.signin-section{
+  width:100%;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height:76vh;
+  background: url('../../images/background.jpg') no-repeat bottom left;
+  background-repeat:no-repeat;
+  background-size: 100% 100%;
+}

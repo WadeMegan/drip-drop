@@ -34,7 +34,13 @@ export default class RegistrationForm extends Component {
                 this.props.onRegistrationSuccess()
             })
             .catch(res=>{
-                if(res.error === ('Password must contain one upper case, lower case, number'||'There is already an account associated with this email'||'Password be longer than 8 characters')){
+                if(res.error === 'Password must contain one upper case, lower case, number'){
+                    this.setState({error:res.error})
+                }
+                else if(res.error === 'There is already an account associated with this email'){
+                    this.setState({error:res.error})
+                }
+                else if(res.error === 'Password be longer than 8 characters'){
                     this.setState({error:res.error})
                 }
                 else{
@@ -52,34 +58,34 @@ export default class RegistrationForm extends Component {
         const { error } = this.state
         return (
                 <form className='register-form' onSubmit={this.handleSubmit}>
-                    <Link to="/signin">
-                        <button className='signin-button'>Sign In</button>
-                    </Link>
-                    <div className='register-button'>Register</div>
-                    <div role='alert'>
-                        {error && <p>{error}</p>}
+                    <legend>Create Account</legend>
+                    <div className='formElements'>
+                        <div role='alert' id='error'>
+                            {error && <p>{error}</p>}
+                        </div>
+                        <div>
+                            <label htmlFor="first_name">First name</label>
+                            <input type="text" name='first_name' id='first_name' required/>
+                        </div>
+                        <div>
+                            <label htmlFor="last_name">Last name</label>
+                            <input type="text" name='last_name' id='last_name' required/>
+                        </div>
+                        <div>
+                            <label htmlFor="phone_number">Phone</label>
+                            <input type="tel" name='phone_number' id='phone_number' required/>
+                        </div>
+                        <div>
+                            <label htmlFor="email">Email</label>
+                            <input type="text" name='email' id='email' required/>
+                        </div>
+                        <div>
+                            <label htmlFor="password">Password</label>
+                            <input type="password" name='password' id='password' required/>
+                        </div>
+                        <input className='form-register-button' type='submit' value='Register'/>
+                        <p className='signinLink'>Have an account? <Link to='/signin'>Sign in.</Link></p>
                     </div>
-                    <div>
-                        <label htmlFor="first_name">First name</label>
-                        <input type="text" name='first_name' id='first_name' required/>
-                    </div>
-                    <div>
-                        <label htmlFor="last_name">Last name</label>
-                        <input type="text" name='last_name' id='last_name' required/>
-                    </div>
-                    <div>
-                        <label htmlFor="phone_number">Phone</label>
-                        <input type="tel" name='phone_number' id='phone_number' required/>
-                    </div>
-                    <div>
-                        <label htmlFor="email">Email</label>
-                        <input type="text" name='email' id='email' required/>
-                    </div>
-                    <div>
-                        <label htmlFor="password">Password</label>
-                        <input type="password" name='password' id='password' required/>
-                    </div>
-                    <input className='form-register-button' type='submit' value='Register'/>
                 </form>
         )
     }

@@ -112,13 +112,22 @@ export default class AllPlantsPage extends Component {
         return (
             <Error>
             <section className='available-plants-section'>
-                <h2>Available Plants</h2>
-                <p className='directions'>Select the plants you'd like us to remind you about. We'll do the rest! When you're done, go ahead and check out <Link to="/your-plants">your plants</Link>.</p> 
-                <form className='search-form'> 
-                    <label htmlFor="search-plants">Search available plants:</label>
-                    <input type="text" name='search-plants' id='search-plants' placeholder="zz plant" onChange={this.filterPlants}/>
-                </form>
+                <div className='banner'>
+                    <h2>Available Plants</h2>
+                    <div className='switchPagesButton'>
+                        <div className='pageButton availableButton current'>
+                            <p className='buttonItem'>Available Plants</p>
+                        </div>
+                        <Link className='pageButton yourPlantsButton notCurrent' to='your-plants'>
+                            Your Plants
+                        </Link>
+                    </div>
+                </div>
                 <div className='all-plants-container'>
+                    <form className='search-form'> 
+                        <label htmlFor="search-plants">Search available plants: </label>
+                        <input type="text" name='search-plants' id='search-plants' placeholder="zz plant" onChange={this.filterPlants}/>
+                    </form>
                     {this.state.isFiltered
                     ? this.renderPlants(this.state.filteredPlants)
                     : this.renderPlants(this.context.plantList)}
