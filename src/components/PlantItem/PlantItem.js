@@ -5,7 +5,6 @@ import AddButton from '../AddButton/AddButton'
 import RemoveButton from '../RemoveButton/RemoveButton'
 import PlantApiService from '../../services/plant-api-services'
 import UserService from '../../services/user-service'
-import Button from '../Button/Button'
 
 export default class PlantItem extends Component {
     static contextType = PlantListContext
