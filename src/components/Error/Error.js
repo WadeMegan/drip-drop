@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
-import PlantListContext from '../contexts/PlantListContext'
+import PlantListContext from '../../contexts/PlantListContext'
+import './Error.css'
 
 class Error extends Component {
     static contextType = PlantListContext
@@ -18,7 +19,7 @@ class Error extends Component {
     render(){
         if(this.context.error !==null){
           return(
-              <h2>Drip Drop is currently experiencing some technical difficulties. Please try again later.</h2>
+              <h2 className='errorBoundary'>Oops! Drip Drop is currently experiencing technical difficulties. Please try again later.</h2>
           )
       }
       return this.props.children 

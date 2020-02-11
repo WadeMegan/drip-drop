@@ -8,7 +8,7 @@ import TokenService from '../../services/token-service'
 import PlantListContext from '../../contexts/PlantListContext'
 import UserService from '../../services/user-service'
 import PlantApiService from '../../services/plant-api-services';
-import Error from '../../components/Error'
+import Error from '../../components/Error/Error.js'
 
 export default class SigninForm extends Component {
     static contextType = PlantListContext
@@ -85,6 +85,7 @@ export default class SigninForm extends Component {
             <form className='signin-form' onSubmit={this.handleSubmitJwtAuth}>
                 <legend>Welcome Back</legend>
                 <div className='formElements'>
+                    <p className='demo'>To demo, sign in with email: test@gmail.com and password: password</p>
                     <div role='alert' id='error'>
                         {error && <p>{error}</p>}
                     </div>

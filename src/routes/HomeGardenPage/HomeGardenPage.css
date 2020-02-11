@@ -1,12 +1,8 @@
-
-  .usersPlantsSection h2{
-    text-align: center;
-    padding-bottom: 15px;
-  }
-
 .your-plants-container{
     width:100%;
-    padding:20px;
+    padding-bottom:20px;
+    padding-left:20px;
+    padding-right:20px;
     display:flex;
     flex-direction: column;
     justify-content:center;
@@ -41,3 +37,7 @@
     color:white;
     cursor: pointer;
 }
+
+.usersPlantsSection{
+    padding-top:6vh;
+  }

@@ -38,10 +38,6 @@
   line-height:50px;
 }
 
-.formElements{
-  padding:25px;
-}
-
 .formElements div{
   padding-bottom:10px;
 }
@@ -61,4 +57,28 @@
 
 .signinLink a:hover{
   cursor: pointer;
+}
+
+@media only screen and (min-width: 500px) {
+  .register-form{
+    width:60%;
+  }
+}
+
+@media only screen and (min-width: 750px) {
+  .register-form{
+    width:50%;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .register-form{
+    width:40%;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .register-form{
+    width:30%;
+  }
 }

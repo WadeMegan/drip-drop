@@ -11,8 +11,8 @@ import HomeGardenPage from '../../routes/HomeGardenPage/HomeGardenPage'
 import dummyStore from '../../store/dummy-store'
 import PrivateRoute from '../../components/Utils/PrivateRoute'
 import PublicOnlyRoute from '../../components/Utils/PublicOnlyRoute'
-import Error from '../../components/Error'
-const queryString = require('query-string');
+import Error from '../../components/Error/Error'
+import DirectionsPage from '../../routes/DirectionsPage/DirectionsPage'
 
 
 class App extends Component {
@@ -52,7 +52,7 @@ class App extends Component {
         <main className='App'>
             {this.state.hasError && <p>Oops! There was an error!</p>}
             <Switch>
-                <Route 
+                <PublicOnlyRoute 
                   exact 
                   path={'/'}
                   component={LandingPage}
@@ -72,6 +72,10 @@ class App extends Component {
                 <PrivateRoute 
                   path={'/your-plants'}
                   component={HomeGardenPage}
+                />
+                <PrivateRoute 
+                  path={'/directions'}
+                  component={DirectionsPage}
                 />
             </Switch>
         </main>

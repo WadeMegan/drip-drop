@@ -1,7 +1,7 @@
 .hero{
   background: url('../../images/hero12.jpg') no-repeat bottom left;
   background-repeat:no-repeat;
-  height:65vh;
+  height:60vh;
   background-size:125%;
   color:black;
   display:flex;
@@ -9,13 +9,13 @@
   align-items: center;
   text-align: center;
   background-color:#e9e8e6;
+  justify-content:center;
 }
 
 .heroText{
   width:80%;
-  position: absolute;
-  top:10%;
-  height:25%;
+  position: relative;
+  height:50%;
   display:flex;
   flex-direction: column;
   align-items: center;
@@ -23,8 +23,10 @@
 }
 
 .heroText h2 {
-  font-size: 32px;
+  font-size: 28px;
+  line-height:35px;
   color:#041f3c;
+  font-family: 'Sriracha', cursive;
 }
 
 .heroText p{
@@ -41,10 +43,105 @@
   color:#041f3c;
   font-size:18px;
   text-decoration: none;
+  display:flex;
+  align-items:center;
+  justify-content:center;
 }
   
 .getStarted:hover {
   background-color: black;
   color:white;
   cursor: pointer;
+}
+
+
+.phoneImg{
+  width:60%;
+  border-radius: 25px;
+  float:right;
+}
+
+#directionsSection{
+  padding:20px;
+  display:flex;
+  flex-direction:column;
+  align-items: center;
+}
+
+.landingPageButtonContainer{
+  height:70px;
+  display:flex;
+  flex-direction: column;
+  align-items:center;
+  width:50%;
+  margin-top:25px;
+}
+
+.registerButton{
+  padding: 10px;
+  background-color: #f5d60d;
+  color:black;
+  border-radius: 25px;
+  width:75%;
+  height:50px;
+  color:#041f3c;
+  font-size:18px;
+  text-decoration: none;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width:100%;
+}
+
+
+
+.registerButton:hover{
+  background-color: black;
+  color:white;
+  cursor: pointer;
+}
+
+.landingPageButtonContainer p a {
+  color:black;
+}
+
+.directionsSection .step{
+  color:#041f3c;
+  display:inline;
+  font-family: 'Sriracha', cursive;
+  font-size:20px;
+}
+
+.directionsSection h3{
+  font-family: 'Sriracha', cursive;
+  color:#041f3c;
+}
+
+.directionsSection p{
+  font-size:16px;
+  line-height:20px;
+  margin-top:10px;
+}
+
+.demoInfo{
+  width:100%;
+  margin-top:10px;
+  display:flex;
+  justify-content:center;
+}
+
+.demoInfo p{
+  padding:10px;
+  width:85%;
+  margin-top:0px;
+  background-color:#041f3c;
+  border-radius:25px;
+  color:white;
+  text-align: center;
+  box-shadow: 0 10px 10px -1px rgba(0,0,0,.2);
+}
+
+.directionsText{
+  display:flex;
+  flex-direction: column;
 }

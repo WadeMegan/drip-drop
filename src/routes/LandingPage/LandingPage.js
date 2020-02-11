@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import './LandingPage.css'
+import phoneImg from '../../images/phoneImg.jpg'
 
 export default class LandingPage extends Component {
 
@@ -15,7 +16,24 @@ export default class LandingPage extends Component {
                     </div>     
                 </div>
                 <div className='directionsSection' id='directionsSection'>
-                    <p>Drip Drop is a web application that users can use to remind them when to water their house plants. Users will be able to register for an account, log in, and then select their plants from a list of common houseplants. From there, Drip Drop will check once per day to see if the user has any plants that need to be watered that day. If so, Drip Drop will send an SMS (via Twilio) to the user to remind them to water their plants.</p>
+                    <h3>Watering Made Simple</h3>
+                    <div className='directionsText'>
+                        <p>Drip Drop will remind you to water your house plants via text. Here's how to get started:</p>
+                        <p><span className='step'>Step 1</span> Register for an account and sign in. </p>
+                        <div className='demoInfo'>
+                            <p>If you'd like to demo Drip Drop, sign in with email: test@gmail.com and password: password</p>
+                        </div>
+                        <p><span className='step'>Step 2</span> You'll be directed to your plants. These are the plants that Drip Drop will text you about. To select plants, head on over to the available plants and add any you have.</p>
+                        <p><span className='step'>Step 3</span><img src={phoneImg} className='phoneImg'></img> Each day, Drip Drop will check if you have any plants that need to be watered. If so, you'll get a reminder text. To stop getting notifications for a plant, simply remove it.</p>
+                    </div>
+
+        
+                    <div className='landingPageButtonContainer'> 
+                       <Link to="register" className='registerButton'>Register Now</Link> 
+                       <p>Or, <Link to='signin'>sign in.</Link></p>
+                    </div>
+                    
+                    
                 </div>
             </section>
         )

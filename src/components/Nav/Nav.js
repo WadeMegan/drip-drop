@@ -20,7 +20,6 @@ export default class Nav extends Component {
     }
 
     handleSuccessfulLogin = () => {
-        console.log('hi')
         this.setState({
             loggedIn:true
         })
@@ -57,7 +56,7 @@ export default class Nav extends Component {
     render () {
         return (
            <nav>
-               <h1>Drip <span><i class="fas fa-tint"></i></span> Drop</h1>
+               <h1>Drip <span><i className="fas fa-tint"></i></span> Drop</h1>
                {TokenService.hasAuthToken()
                 ? this.renderLogoutLink()
                 : this.renderLoginLink()}

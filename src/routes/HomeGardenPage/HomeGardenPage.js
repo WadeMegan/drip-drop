@@ -6,7 +6,7 @@ import dummyStore from '../../store/dummy-store'
 import PlantItem from '../../components/PlantItem/PlantItem'
 import PlantApiService from '../../services/plant-api-services'
 import UserService from '../../services/user-service'
-import Error from '../../components/Error'
+import Error from '../../components/Error/Error'
 
 export default class HomeGardenPage extends Component {
     static contextType = PlantListContext
@@ -95,23 +95,26 @@ export default class HomeGardenPage extends Component {
         
         return (
             <Error>
+            <div className='switchPagesNav'>
+                <Link className='pageButton directionsButton notCurrent' to='directions'>
+                    <p className='buttonItem'>Directions</p>
+                </Link>
+                <Link className='pageButton availableButton notCurrent' to='plants'>
+                    <p className='buttonItem'>Available Plants</p>
+                </Link>
+                <div className='pageButton yourPlantsButton current'>
+                    Your Plants
+                </div>
+            </div>
             <section className='usersPlantsSection'>
                 <div className='banner'>
                     <h2>Your Plants</h2>
-                    <div className='switchPagesButton'>
-                        <Link className='pageButton availableButton notCurrent' to='plants'>
-                            <p className='buttonItem'>Available Plants</p>
-                        </Link>
-                        <div className='pageButton yourPlantsButton current'>
-                            Your Plants
-                        </div>
-                    </div>
-                </div>
-                <div className='your-plants-container'>
                     <form className='search-form'> 
                         <label htmlFor="search-plants">Search your plants: </label>
                         <input type="text" name='search-plants' id='search-plants' placeholder="zz plant" onChange={this.filterPlants}/>
                     </form>
+                </div>
+                <div className='your-plants-container'>
                     {this.state.isFiltered
                     ? this.renderPlants(this.state.filteredPlants)
                     : this.renderPlants(this.context.usersPlants)}

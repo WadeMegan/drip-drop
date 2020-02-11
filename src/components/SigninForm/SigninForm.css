@@ -1,3 +1,7 @@
+  /*font-family: 'Fjalla One', sans-serif;
+font-family: 'Noto Sans', sans-serif;*/
+
+  
   .form-signin-button{    
     padding: 10px;
     background-color: #f5d60d;
@@ -39,7 +43,7 @@
 }
 
 .formElements{
-  padding:25px;
+  padding:20px;
 }
 
 .formElements div{
@@ -61,4 +65,34 @@
 
 .createAccountLink a:hover{
   cursor: pointer;
+}
+
+.demo{
+  color:red;
+  font-size: 12px;
+}
+
+
+@media only screen and (min-width: 500px) {
+  .signin-form{
+    width:60%;
+  }
+}
+
+@media only screen and (min-width: 750px) {
+  .signin-form{
+    width:50%;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .signin-form{
+    width:40%;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .signin-form{
+    width:30%;
+  }
 }

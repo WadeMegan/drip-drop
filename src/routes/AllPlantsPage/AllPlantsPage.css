@@ -1,12 +1,17 @@
+/*font-family: 'Fjalla One', sans-serif;
+font-family: 'Noto Sans', sans-serif;*/
 
-.available-plants-section h2{
-  text-align: center;
-  padding-bottom: 15px;
+.banner h2{
+  padding-bottom:10px;
+  font-family: 'Sriracha', cursive;
+  color:#041f3c;
 }
   
   .all-plants-container{
     width:100%;
-    padding:20px;
+    padding-left:20px;
+    padding-right:20px;
+    padding-bottom:20px;
     display:flex;
     flex-direction: column;
     justify-content:center;
@@ -39,10 +44,11 @@
   height:50px;
   color:#041f3c;
   display:flex;
+  text-align: center;
 }
 
 .pageButton{
-  width:50%;
+  width:33.333333%;
   display:flex;
   align-items:center;
   justify-content: center;
@@ -59,7 +65,7 @@ cursor: pointer;
 }
 
 
-.availableButton{
+.directionsButton{
   border-top-left-radius: 25px;
   border-bottom-left-radius: 25px;
 }
@@ -76,13 +82,47 @@ cursor: pointer;
 }
 
 .banner{
-  background: url('../../images/waterBanner.jpg') no-repeat bottom left;
+ background: url('../../images/bannerLeaf.jpg') no-repeat top right;
   background-size:100%;
   background-repeat:no-repeat;
-  height:150px;
-  display: flex;
+  height:125px;
+  /*display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items:center;
+  align-items:center;*/
   padding:20px;
+  background-color:#edf6fb;
+}
+
+.search-form input{
+  width:40%;
+}
+
+
+
+@media only screen and (min-width: 500px) {
+  .switchPagesButton{
+    width:75%;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .switchPagesButton{
+    width:60%;
+  }
+}
+
+
+.switchPagesNav{
+  background-color: #f5d60d;
+  display:flex;
+  height:6vh;
+  /*box-shadow: 0 10px 10px -1px rgba(245,214,13,.2);*/
+  width:100%;
+  z-index: 1;
+  position:fixed;
+}
+
+.available-plants-section{
+  padding-top:6vh;
 }

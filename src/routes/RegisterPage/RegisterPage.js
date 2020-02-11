@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import './RegisterPage.css'
 import RegistrationForm from '../../components/RegistrationForm/RegistrationForm'
-import Error from '../../components/Error'
+import Error from '../../components/Error/Error'
 import PlantListContext from '../../contexts/PlantListContext'
 
 
