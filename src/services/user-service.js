@@ -2,13 +2,13 @@ import config from '../config'
 
 const UserService = {
     saveUserToken(userId) {
-        window.localStorage.setItem(config.USER_KEY, userId)
+        window.sessionStorage.setItem(config.USER_KEY, userId)
       },
       getUserToken() {
-        return window.localStorage.getItem(config.USER_KEY)
+        return window.sessionStorage.getItem(config.USER_KEY)
       },
       clearUserToken() {
-        window.localStorage.removeItem(config.USER_KEY)
+        window.sessionStorage.removeItem(config.USER_KEY)
       },
       /* hasUserToken() {
         return !!TokenService.getAuthToken()
