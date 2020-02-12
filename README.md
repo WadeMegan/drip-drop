@@ -18,7 +18,7 @@ Drip Drop is a web application that reminds users to water their houseplants. Us
 ![user's page mobile](https://i.imgur.com/7ZAaSh5.png)
 
 ### The Sms Messages
-![sms message](https://i.imgur.com/TG2s96F.png)
+![sms message](https://i.imgur.com/TG2s96F.png = 375x)
 
 ## Goal
 
