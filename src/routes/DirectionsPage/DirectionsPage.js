@@ -6,6 +6,7 @@ import PlantListContext from '../../contexts/PlantListContext'
 import PlantApiService from '../../services/plant-api-services'
 import UserService from '../../services/user-service'
 import Error from '../../components/Error/Error'
+import phoneImg from '../../images/phoneImg.jpg'
 
 export default class DirectionsPage extends Component {    
     render() {
@@ -26,10 +27,17 @@ export default class DirectionsPage extends Component {
             <section className='directionsSection'>
                 <div className='banner'>
                     <h2>Directions</h2>
-    
                 </div>
-                <div className='all-plants-container'>
-
+                <div className='directionsContainer'>
+                <div className='directionsSection' id='directionsSection'>
+                    <h3>Drip Drop makes watering your plants easy... Here's how it works.</h3>
+                    <div className='directionsText'>
+                        <p><span className='step'>Step 1</span> The "Your Plants" page contains the plants that Drip Drop will text you about. To select plants, head on over to the "Available Plants" page and add any that you would like to be reminded to water. When you add a plant, you will begin receiving reminders for it the next day.</p>
+                        <p><span className='step'>Step 2</span> Each day, Drip Drop will check if you have any plants that need to be watered. If so, you'll get a reminder text. To stop getting notifications for a plant, simply remove it.</p>
+                        <p className='step'>And that's it!</p>
+                        
+                    </div>            
+                </div>
                 </div>
             </section>
             </Error>

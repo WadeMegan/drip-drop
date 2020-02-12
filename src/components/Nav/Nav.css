@@ -17,6 +17,7 @@ nav {
 nav h1{
   color: #041f3c;
   font-family: 'Sriracha', cursive;
+  font-size:32px;
 }
 
 nav i{
@@ -29,8 +30,10 @@ nav i{
   text-decoration: none;
   border-radius: 10px;
   color: #041f3c;
+  font-size:18px;
 }
 
 .navLink:hover {
   border:2px solid #041f3c;
+  cursor: pointer;
 }

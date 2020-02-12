@@ -12,17 +12,20 @@ footer {
 
 .socialLinks{
     display:flex;
-    width:25%;
+    
     display:flex;
     justify-content: space-evenly;
 }
 
 .socialLinks li{
     list-style: none;
+
 }
 
 .socialLinks i{
     color: #041f3c;
+    padding-left:5px;
+    padding-right:5px;
 }
 
 .socialLinks i:hover{

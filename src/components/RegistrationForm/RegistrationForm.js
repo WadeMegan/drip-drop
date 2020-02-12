@@ -65,19 +65,19 @@ export default class RegistrationForm extends Component {
                         </div>
                         <div>
                             <label htmlFor="first_name">First name</label>
-                            <input type="text" name='first_name' id='first_name' required/>
+                            <input type="text" name='first_name' id='first_name' placeholder='John' required/>
                         </div>
                         <div>
                             <label htmlFor="last_name">Last name</label>
-                            <input type="text" name='last_name' id='last_name' required/>
+                            <input type="text" name='last_name' id='last_name' placeholder='Doe' required/>
                         </div>
                         <div>
                             <label htmlFor="phone_number">Phone</label>
-                            <input type="tel" name='phone_number' id='phone_number' required/>
+                            <input type="tel" name='phone_number' id='phone_number' placeholder='1112223333' required/>
                         </div>
                         <div>
                             <label htmlFor="email">Email</label>
-                            <input type="text" name='email' id='email' required/>
+                            <input type="text" name='email' id='email' placeholder='johndoe@gmail.com' required/>
                         </div>
                         <div>
                             <label htmlFor="password">Password</label>

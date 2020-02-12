@@ -21,10 +21,14 @@ export default class LandingPage extends Component {
                         <p>Drip Drop will remind you to water your house plants via text. Here's how to get started:</p>
                         <p><span className='step'>Step 1</span> Register for an account and sign in. </p>
                         <div className='demoInfo'>
-                            <p>If you'd like to demo Drip Drop, sign in with email: test@gmail.com and password: password</p>
+                            <p>To demo Drip Drop, sign in with email: test@gmail.com and password: password</p>
                         </div>
-                        <p><span className='step'>Step 2</span> You'll be directed to your plants. These are the plants that Drip Drop will text you about. To select plants, head on over to the available plants and add any you have.</p>
-                        <p><span className='step'>Step 3</span><img src={phoneImg} className='phoneImg'></img> Each day, Drip Drop will check if you have any plants that need to be watered. If so, you'll get a reminder text. To stop getting notifications for a plant, simply remove it.</p>
+                        <div className='imgContainer'>
+                            <img src={phoneImg} className='phoneImg'></img> 
+                            <p><span className='step'>Step 2</span> You'll be directed to your plants. These are the plants that Drip Drop will text you about. To select plants, head on over to the available plants and add any you have.</p>
+                            <p><span className='step stepThree'>Step 3</span> Each day, Drip Drop will check if you have any plants that need to be watered. If so, you'll get a reminder text. To stop getting notifications for a plant, simply remove it.</p>
+                        </div>
+                        
                     </div>
 
         

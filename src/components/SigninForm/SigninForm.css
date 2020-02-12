@@ -50,6 +50,10 @@ font-family: 'Noto Sans', sans-serif;*/
   padding-bottom:10px;
 }
 
+.formElements label{
+  font-size:16px;
+}
+
 #error {
   color:red;
 }
@@ -57,6 +61,7 @@ font-family: 'Noto Sans', sans-serif;*/
 .createAccountLink{
   padding-top:10px;
   text-align: end;
+  font-size:16px;
 }
 
 .createAccountLink a{

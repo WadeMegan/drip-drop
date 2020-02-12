@@ -5,6 +5,7 @@ font-family: 'Noto Sans', sans-serif;*/
   padding-bottom:10px;
   font-family: 'Sriracha', cursive;
   color:#041f3c;
+  font-size:28px;
 }
   
   .all-plants-container{
@@ -33,9 +34,9 @@ font-family: 'Noto Sans', sans-serif;*/
   
   #search-plants{
     border:1px solid grey;
+    font-size:16px;
   }
   
-
 .switchPagesButton{
   background-color: #f5d60d;
   color:black;
@@ -44,7 +45,6 @@ font-family: 'Noto Sans', sans-serif;*/
   height:50px;
   color:#041f3c;
   display:flex;
-  text-align: center;
 }
 
 .pageButton{
@@ -52,6 +52,7 @@ font-family: 'Noto Sans', sans-serif;*/
   display:flex;
   align-items:center;
   justify-content: center;
+  text-align: center;
 }
 
 .notCurrent:hover{
@@ -62,17 +63,7 @@ cursor: pointer;
 .pageButton p, .pageButton{
   text-decoration: none;
   color:#041f3c;
-}
-
-
-.directionsButton{
-  border-top-left-radius: 25px;
-  border-bottom-left-radius: 25px;
-}
-
-.yourPlantsButton{
-  border-top-right-radius: 25px;
-  border-bottom-right-radius: 25px;
+  font-size:16px;
 }
 
 .current{
@@ -86,10 +77,6 @@ cursor: pointer;
   background-size:100%;
   background-repeat:no-repeat;
   height:125px;
-  /*display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items:center;*/
   padding:20px;
   background-color:#edf6fb;
 }
@@ -97,21 +84,6 @@ cursor: pointer;
 .search-form input{
   width:40%;
 }
-
-
-
-@media only screen and (min-width: 500px) {
-  .switchPagesButton{
-    width:75%;
-  }
-}
-
-@media only screen and (min-width: 1200px) {
-  .switchPagesButton{
-    width:60%;
-  }
-}
-
 
 .switchPagesNav{
   background-color: #f5d60d;
@@ -125,4 +97,16 @@ cursor: pointer;
 
 .available-plants-section{
   padding-top:6vh;
+}
+
+@media only screen and (min-width: 800px) {
+  .search-form input{
+    width:30%;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .search-form input{
+    width:20%;
+  }
 }

@@ -3,7 +3,6 @@ import './Nav.css'
 import TokenService from '../../services/token-service'
 import { Link } from 'react-router-dom'
 import UserService from '../../services/user-service'
-import logo from '../../images/logo.png'
 
 export default class Nav extends Component {
 

@@ -5,3 +5,8 @@
   .directionsSection{
     padding-top:6vh;
   }
+
+.directionsSection h3{
+    font-size:22px;
+    line-height:26px;
+}

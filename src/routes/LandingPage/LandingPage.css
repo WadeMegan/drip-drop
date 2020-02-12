@@ -1,5 +1,5 @@
 .hero{
-  background: url('../../images/hero12.jpg') no-repeat bottom left;
+  background: url('../../images/hero.jpg') no-repeat bottom left;
   background-repeat:no-repeat;
   height:60vh;
   background-size:125%;
@@ -15,7 +15,6 @@
 .heroText{
   width:80%;
   position: relative;
-  height:50%;
   display:flex;
   flex-direction: column;
   align-items: center;
@@ -31,6 +30,9 @@
 
 .heroText p{
   font-size: 16px;
+  line-height: 20px;
+  padding-top:15px;
+  padding-bottom:15px;
 }
 
 .getStarted {
@@ -38,14 +40,14 @@
   background-color: #f5d60d;
   color:black;
   border-radius: 25px;
-  width:75%;
+  width:70%;
   height:50px;
   color:#041f3c;
   font-size:18px;
   text-decoration: none;
   display:flex;
-  align-items:center;
   justify-content:center;
+  align-items:center;
 }
   
 .getStarted:hover {
@@ -56,9 +58,10 @@
 
 
 .phoneImg{
-  width:60%;
+  width:58%;
   border-radius: 25px;
   float:right;
+  margin-top:10px;
 }
 
 #directionsSection{
@@ -115,6 +118,7 @@
 .directionsSection h3{
   font-family: 'Sriracha', cursive;
   color:#041f3c;
+  font-size: 22px;
 }
 
 .directionsSection p{
@@ -144,4 +148,119 @@
 .directionsText{
   display:flex;
   flex-direction: column;
+}
+
+@media only screen and (min-width: 400px) {
+  #directionsSection{
+    padding-right:30px;
+    padding-left:30px;
+  }
+}
+
+@media only screen and (min-width: 450px) {
+  #directionsSection{
+    padding-right:40px;
+    padding-left:40px;
+  }
+  .phoneImg{
+    width:45%;
+  }
+}
+
+@media only screen and (min-width: 450px) {
+  #directionsSection{
+    padding-right:50px;
+    padding-left:50px;
+  }
+  .phoneImg{
+    width:35%;
+    margin-left:10px;
+  }
+}
+
+.stepThree{
+  padding-top:10px;
+}
+
+.imgContainer{
+  margin-top:10px;
+}
+
+@media only screen and (min-width: 600px) {
+  .heroText{
+    width:65%;
+  }
+  #directionsSection{
+    padding-right:60px;
+    padding-left:60px;
+  }
+  .phoneImg{
+    width:30%;
+    margin-left:30px;
+  }
+}
+
+@media only screen and (min-width: 650px) {
+  #directionsSection{
+    padding-right:80px;
+    padding-left:80px;
+  }
+  .phoneImg{
+    width:30%;
+    margin-left:20px;
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  .heroText{
+    width:55%;
+  }
+  #directionsSection{
+    padding-right:120px;
+    padding-left:120px;
+  }
+  .phoneImg{
+    width:40%;
+    margin-left:30px;
+  }
+}
+
+@media only screen and (min-width: 850px) {
+  #directionsSection{
+    padding-right:160px;
+    padding-left:160px;
+  }
+}
+
+@media only screen and (min-width: 950px) {
+  .heroText{
+    width:55%;
+  }
+  #directionsSection{
+    padding-right:200px;
+    padding-left:200px;
+  }
+}
+
+
+@media only screen and (min-width: 1000px) {
+  .heroText{
+    width:40%;
+  }
+  #directionsSection{
+    padding-right:220px;
+    padding-left:220px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+
+  #directionsSection{
+    padding-right:320px;
+    padding-left: 320px;
+  }
+  .phoneImg{
+    width:30%;
+    margin-left:30px;
+  }
 }
