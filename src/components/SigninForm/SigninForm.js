@@ -74,8 +74,9 @@ export default class SigninForm extends Component {
             return <Redirect to='/your-plants'/>
         }
         return(
+            <>
             <form className='signinForm' onSubmit={this.handleSubmitJwtAuth}>
-                <legend>Welcome Back</legend>
+                <h2 className='formTitle'>Welcome Back</h2>
                 <div className='formElements'>
                     <p className='demo'>To demo, sign in with email: test@gmail.com and password: password</p>
                     <div role='alert' id='error'>
@@ -93,6 +94,7 @@ export default class SigninForm extends Component {
                     <p className='createAccountLink'>New? <Link to='/register'>Create account.</Link></p>
                 </div>
             </form>
+            </>
         )
     }
 

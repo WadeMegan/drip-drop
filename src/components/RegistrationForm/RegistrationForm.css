@@ -26,7 +26,7 @@
   border: 1px solid grey;
 }
 
-.registerForm legend {
+.formTitle {
   color:white;
   background-color:#041f3c;
   width:100%;

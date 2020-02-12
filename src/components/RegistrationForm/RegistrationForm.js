@@ -61,7 +61,7 @@ export default class RegistrationForm extends Component {
         const { error } = this.state
         return(
             <form className='registerForm' onSubmit={this.handleSubmit}>
-                <legend>Create Account</legend>
+                <h2 className='formTitle'>Create Account</h2>
                 <div className='formElements'>
                     <div role='alert' id='error'>
                         {error && <p>{error}</p>}

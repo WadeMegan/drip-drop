@@ -23,7 +23,7 @@ export default class LandingPage extends Component {
                             <p>To demo Drip Drop, sign in with email: test@gmail.com and password: password</p>
                         </div>
                         <div className='imgContainer'>
-                            <img src={phoneImg} className='phoneImg'></img> 
+                            <img src={phoneImg} className='phoneImg' alt='phone with Drip Drop texts'></img> 
                             <p><span className='step'>Step 2</span> You'll be directed to your plants. These are the plants that Drip Drop will text you about. To select plants, head on over to the available plants and add any you have.</p>
                             <p><span className='step stepThree'>Step 3</span> Each day, Drip Drop will check if you have any plants that need to be watered. If so, you'll get a reminder text. To stop getting notifications for a plant, simply remove it.</p>
                         </div>
