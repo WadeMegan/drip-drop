@@ -4,9 +4,13 @@
 
 A live version of the app can be accessed [here]().
 
+To demo Drip Drop, log in with:
+* Email: test@gmail.com
+* Password: password
+
 ## Summary
 
-Drip Drop is a web application that reminds users to water their houseplants. Users can select the plants they have from a list of common houseplants. Each day, Drip Drop will check to see if any of the user's plants will need to be watered. If so, Drip Drop will send the user a sms message as a reminder. 
+Drip Drop is a web application that reminds users to water their houseplants. Users can select the plants they have from a list of common houseplants. Each day, Drip Drop will check to see if any of the user's plants will need to be watered. If so, Drip Drop will send the user a sms message as a reminder. The goal of Drip Drop is to make it easier for users to remember when they should be watering their plants, in order to prevent fewer houseplant deaths caused by over or under watering.
 
 ### Landing Page: 
 ![landing page mobile](https://i.imgur.com/wYWEp4G.png)
@@ -20,91 +24,30 @@ Drip Drop is a web application that reminds users to water their houseplants. Us
 ### The Sms Messages
 ![sms](https://i.imgur.com/TG2s96F.png)
 
-## Goal
-
 ## Technologies Used
 
-### Front End:
-* HTML 
+### Front End: 
+* ReactJS
 * CSS
-* JavaScript
-* JQuery
+
+### Back End: 
+* Node.js
+* Express
+* PostgreSQL
 
 ### APIs:
-* Google Maps Geocoder
-* Google Maps Nearby Places
-* Google Maps Distance Matrix
+* Twilio
 
-## Browser Compatibility
+## Associated Repositories
+
+This is the repository for Drip Drop's client. The repository for Drip Drop's server can be found [here](https://github.com/WadeMegan/drip-drop-api). A third repository, which holds the files responsible for sending sms messages, can be found [here](https://github.com/WadeMegan/drip-drop-send-sms). These repositories are outlined below: 
+
+### [drip-drop-api](https://github.com/WadeMegan/drip-drop-api)
 
 
 
+### [drip-drop-send-sms](https://github.com/WadeMegan/drip-drop-send-sms)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+drip-drop-send-sms is built using Node. The file send-sms.js, uses the node-fetch package to make a GET request to the Drip Drop API sms endpoint. It then iterates through the sms list to check if the reminder date is equal to the current date. If so, it uses the Twilio API to send a reminder message to the user. If a text is sent, the reminder date is updated so that the user will recieve another message when the plant needs to be watered again. drip-drop-send-sms is deployed on Heroku and using Heroku's built in scheduler, send-sms.js is run once per day every day.
 
-## Available Scripts
 
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
