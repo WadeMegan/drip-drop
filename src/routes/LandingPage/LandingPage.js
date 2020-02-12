@@ -4,8 +4,7 @@ import './LandingPage.css'
 import phoneImg from '../../images/phoneImg.jpg'
 
 export default class LandingPage extends Component {
-
-    render() {
+    render(){
         return (
             <section className = 'landingPage'>
                 <div className='hero'>
@@ -28,22 +27,13 @@ export default class LandingPage extends Component {
                             <p><span className='step'>Step 2</span> You'll be directed to your plants. These are the plants that Drip Drop will text you about. To select plants, head on over to the available plants and add any you have.</p>
                             <p><span className='step stepThree'>Step 3</span> Each day, Drip Drop will check if you have any plants that need to be watered. If so, you'll get a reminder text. To stop getting notifications for a plant, simply remove it.</p>
                         </div>
-                        
                     </div>
-
-        
                     <div className='landingPageButtonContainer'> 
                        <Link to="register" className='registerButton'>Register Now</Link> 
                        <p>Or, <Link to='signin'>sign in.</Link></p>
                     </div>
-                    
-                    
                 </div>
             </section>
         )
     }
-
 }
-
-
-//<p>Using Drip Drop's easy interface, simply select the plants you currently have in your home garden. From there, we'll send you a text once per day to let you know which plants need to be watered.</p>

@@ -1,9 +1,8 @@
 import config from '../config'
-import 'whatwg-fetch'; 
+import 'whatwg-fetch'; //for safari
 
 const AuthApiService = {
     postLogin({user_name, password}){
-
         return fetch(`${config.API_ENDPOINT}/auth/login`,{
             method: 'POST',
             body: JSON.stringify({

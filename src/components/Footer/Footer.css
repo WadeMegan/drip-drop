@@ -10,24 +10,21 @@ footer {
     color: #041f3c;
 }
 
-.socialLinks{
-    display:flex;
-    
+.socialLinks {
     display:flex;
     justify-content: space-evenly;
 }
 
-.socialLinks li{
+.socialLinks li {
     list-style: none;
-
 }
 
-.socialLinks i{
+.socialLinks i {
     color: #041f3c;
     padding-left:5px;
     padding-right:5px;
 }
 
-.socialLinks i:hover{
+.socialLinks i:hover {
     color:grey;
 }

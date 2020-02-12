@@ -1,4 +1,4 @@
-.your-plants-container{
+.yourPlantsContainer { 
     width:100%;
     padding-bottom:20px;
     padding-left:20px;
@@ -22,22 +22,22 @@
     cursor:pointer;
 }
 
-#search-plants{
+#searchPlants {
     border:1px solid black;
 }
 
-.search-button{
+.searchButton {
     border: 1px solid black;
     background-color: grey;
     color:white;
 }
 
-.search-button:hover{
+.searchButton:hover {
     background-color: black;
-    color:white;
+    color:white;    
     cursor: pointer;
 }
 
-.usersPlantsSection{
+.usersPlantsSection {
     padding-top:6vh;
-  }
+}

@@ -1,13 +1,13 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
-import './AllPlantsPage.css'
-import PlantItem from '../../components/PlantItem/PlantItem'
+import './YourPlantsPage.css'
 import PlantListContext from '../../contexts/PlantListContext'
+import PlantItem from '../../components/PlantItem/PlantItem'
 import PlantApiService from '../../services/plant-api-services'
 import UserService from '../../services/user-service'
 import Error from '../../components/Error/Error'
 
-export default class AllPlantsPage extends Component {
+export default class YourPlantsPage extends Component {
     static contextType = PlantListContext
 
     state = {
@@ -15,7 +15,7 @@ export default class AllPlantsPage extends Component {
         filteredPlants: []
     }
 
-    componentDidMount=()=>{
+    componentDidMount(){
         this.context.clearError()
         const userId = UserService.getUserToken()
 
@@ -32,16 +32,18 @@ export default class AllPlantsPage extends Component {
         }
     }
 
+    componentWillUnmount(){
+        this.context.clearError()
+    }
 
     renderPlants=(plants)=>{
         return plants.map(plant =>
             <PlantItem key={plant.id} plant={plant}/>
-        ) 
+        )
     }
 
     filterPlants = (event) => {
-
-        let clonedArray = JSON.parse(JSON.stringify(this.context.plantList))
+        let clonedArray = JSON.parse(JSON.stringify(this.context.usersPlants))
 
         let plants = clonedArray.filter((plant)=>{
             return plant.name.toLowerCase().search(event.target.value.toLowerCase()) !== -1
@@ -51,7 +53,6 @@ export default class AllPlantsPage extends Component {
             isFiltered:true,
             filteredPlants: plants
         })
-
     }
 
     render(){
@@ -61,29 +62,28 @@ export default class AllPlantsPage extends Component {
                     <Link className='pageButton directionsButton notCurrent' to='directions'>
                         <p className='buttonItem'>Directions</p>
                     </Link>
-                    <div className='pageButton availableButton current'>
+                    <Link className='pageButton availableButton notCurrent' to='plants'>
                         <p className='buttonItem'>Available Plants</p>
-                    </div>
-                    <Link className='pageButton yourPlantsButton notCurrent' to='your-plants'>
-                        Your Plants
                     </Link>
+                    <div className='pageButton yourPlantsButton current'>
+                        Your Plants
+                    </div>
                 </div>
-                <section className='availablePlantsSection'>
+                <section className='usersPlantsSection'>
                     <div className='banner'>
-                        <h2>Available Plants</h2>
+                        <h2>Your Plants</h2>
                         <form className='searchForm'> 
-                            <label htmlFor="searchPlants">Search all plants: </label>
+                            <label htmlFor="searchPlants">Search your plants: </label>
                             <input type="text" name='searchPlants' id='searchPlants' placeholder="zz plant" onChange={this.filterPlants}/>
                         </form>
                     </div>
-                    <div className='allPlantsContainer'>
+                    <div className='yourPlantsContainer'>
                         {this.state.isFiltered
                         ? this.renderPlants(this.state.filteredPlants)
-                        : this.renderPlants(this.context.plantList)}
+                        : this.renderPlants(this.context.usersPlants)}
                     </div>
                 </section>
             </Error>
         )
     }
 }
-

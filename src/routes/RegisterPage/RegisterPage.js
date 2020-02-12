@@ -8,7 +8,6 @@ import PlantListContext from '../../contexts/PlantListContext'
 export default class RegisterPage extends Component {
     static contextType = PlantListContext
 
-    
     static defaultProps = {
         history: {
             push: () => {},
@@ -22,19 +21,17 @@ export default class RegisterPage extends Component {
     handleRegistrationSuccess = user => {
         const { history } = this.props
         history.push('/signin')
-        console.log('it worked')
     }
 
     render() {
         return (
             <Error>
-            <section className = 'registerSection'>
-                <RegistrationForm 
-                    onRegistrationSuccess={this.handleRegistrationSuccess}
-                />
-            </section>
+                <section className = 'registerSection'>
+                    <RegistrationForm 
+                        onRegistrationSuccess={this.handleRegistrationSuccess}
+                    />
+                </section>
             </Error>
         )
     }
-
 }

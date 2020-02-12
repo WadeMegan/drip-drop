@@ -22,7 +22,6 @@ export default class Nav extends Component {
         this.setState({
             loggedIn:true
         })
-
     }
 
     componentWillReceiveProps(nextProps){
@@ -52,14 +51,13 @@ export default class Nav extends Component {
         )
     }
 
-    render () {
+    render(){
         return (
            <nav>
                <h1>Drip <span><i className="fas fa-tint"></i></span> Drop</h1>
                {TokenService.hasAuthToken()
                 ? this.renderLogoutLink()
                 : this.renderLoginLink()}
-        
            </nav>
         )
     }

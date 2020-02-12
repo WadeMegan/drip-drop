@@ -5,9 +5,7 @@ import SigninForm from '../../components/SigninForm/SigninForm'
 import Error from '../../components/Error/Error'
 import PlantListContext from '../../contexts/PlantListContext'
 
-
 export default class SigninPage extends Component {
-
     static contextType = PlantListContext
 
     componentWillUnmount(){
@@ -17,12 +15,11 @@ export default class SigninPage extends Component {
     render() {
         return (
             <Error>
-            <section className = 'signin-section'>
+            <section className = 'signinSection'>
                 <SigninForm onLogin={this.props.onLogin}/>
             </section>
             </Error>
         )
     }
-
 }
 

@@ -1,4 +1,4 @@
-.hero{
+.hero {
   background: url('../../images/hero.jpg') no-repeat bottom left;
   background-repeat:no-repeat;
   height:60vh;
@@ -12,7 +12,7 @@
   justify-content:center;
 }
 
-.heroText{
+.heroText {
   width:80%;
   position: relative;
   display:flex;
@@ -28,7 +28,7 @@
   font-family: 'Sriracha', cursive;
 }
 
-.heroText p{
+.heroText p {
   font-size: 16px;
   line-height: 20px;
   padding-top:15px;
@@ -56,22 +56,21 @@
   cursor: pointer;
 }
 
-
-.phoneImg{
+.phoneImg {
   width:58%;
   border-radius: 25px;
   float:right;
   margin-top:10px;
 }
 
-#directionsSection{
+#directionsSection {
   padding:20px;
   display:flex;
   flex-direction:column;
   align-items: center;
 }
 
-.landingPageButtonContainer{
+.landingPageButtonContainer { 
   height:70px;
   display:flex;
   flex-direction: column;
@@ -80,7 +79,7 @@
   margin-top:25px;
 }
 
-.registerButton{
+.registerButton {
   padding: 10px;
   background-color: #f5d60d;
   color:black;
@@ -96,9 +95,7 @@
   width:100%;
 }
 
-
-
-.registerButton:hover{
+.registerButton:hover {
   background-color: black;
   color:white;
   cursor: pointer;
@@ -108,33 +105,33 @@
   color:black;
 }
 
-.directionsSection .step{
+.directionsSection .step {
   color:#041f3c;
   display:inline;
   font-family: 'Sriracha', cursive;
   font-size:20px;
 }
 
-.directionsSection h3{
+.directionsSection h3 {
   font-family: 'Sriracha', cursive;
   color:#041f3c;
   font-size: 22px;
 }
 
-.directionsSection p{
+.directionsSection p {
   font-size:16px;
   line-height:20px;
   margin-top:10px;
 }
 
-.demoInfo{
+.demoInfo {
   width:100%;
   margin-top:10px;
   display:flex;
   justify-content:center;
 }
 
-.demoInfo p{
+.demoInfo p {
   padding:10px;
   width:85%;
   margin-top:0px;
@@ -145,121 +142,119 @@
   box-shadow: 0 10px 10px -1px rgba(0,0,0,.2);
 }
 
-.directionsText{
+.directionsText { 
   display:flex;
   flex-direction: column;
 }
 
+.stepThree {
+  padding-top:10px;
+}
+
+.imgContainer {
+  margin-top:10px;
+}
+
 @media only screen and (min-width: 400px) {
-  #directionsSection{
+  #directionsSection {
     padding-right:30px;
     padding-left:30px;
   }
 }
 
 @media only screen and (min-width: 450px) {
-  #directionsSection{
+  #directionsSection {
     padding-right:40px;
     padding-left:40px;
   }
-  .phoneImg{
+  .phoneImg {
     width:45%;
   }
 }
 
 @media only screen and (min-width: 450px) {
-  #directionsSection{
+  #directionsSection {
     padding-right:50px;
     padding-left:50px;
   }
-  .phoneImg{
+  .phoneImg {
     width:35%;
     margin-left:10px;
   }
 }
 
-.stepThree{
-  padding-top:10px;
-}
-
-.imgContainer{
-  margin-top:10px;
-}
-
 @media only screen and (min-width: 600px) {
-  .heroText{
+  .heroText {
     width:65%;
   }
-  #directionsSection{
+  #directionsSection {
     padding-right:60px;
     padding-left:60px;
   }
-  .phoneImg{
+  .phoneImg {
     width:30%;
     margin-left:30px;
   }
 }
 
 @media only screen and (min-width: 650px) {
-  #directionsSection{
+  #directionsSection {
     padding-right:80px;
     padding-left:80px;
   }
-  .phoneImg{
+  .phoneImg {
     width:30%;
     margin-left:20px;
   }
 }
 
 @media only screen and (min-width: 800px) {
-  .heroText{
+  .heroText {
     width:55%;
   }
-  #directionsSection{
+  #directionsSection {
     padding-right:120px;
     padding-left:120px;
   }
-  .phoneImg{
+  .phoneImg {
     width:40%;
     margin-left:30px;
   }
 }
 
 @media only screen and (min-width: 850px) {
-  #directionsSection{
+  #directionsSection {
     padding-right:160px;
     padding-left:160px;
   }
 }
 
 @media only screen and (min-width: 950px) {
-  .heroText{
+  .heroText {
     width:55%;
   }
-  #directionsSection{
+  #directionsSection {
     padding-right:200px;
     padding-left:200px;
   }
 }
 
-
 @media only screen and (min-width: 1000px) {
-  .heroText{
+  .heroText {
     width:40%;
   }
-  #directionsSection{
+  #directionsSection {
     padding-right:220px;
     padding-left:220px;
   }
 }
 
 @media only screen and (min-width: 1200px) {
-
-  #directionsSection{
+  #directionsSection {
     padding-right:320px;
     padding-left: 320px;
   }
-  .phoneImg{
+  .phoneImg {
     width:30%;
     margin-left:30px;
   }

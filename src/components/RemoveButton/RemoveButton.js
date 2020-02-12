@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import PlantListContext from '../../contexts/PlantListContext'
 import PlantApiService from '../../services/plant-api-services'
 import UserService from '../../services/user-service'
-import './RemoveButton.css'
 
 export default class RemoveButton extends Component {
     static contextType = PlantListContext
@@ -12,26 +11,18 @@ export default class RemoveButton extends Component {
 
         PlantApiService.deleteReminder(this.props.plant.id,userId)
             .then(res =>{
-                //fetch all users plants and store in context
                 PlantApiService.getUsersPlants(userId)
                     .then(this.context.setUsersPlants)
                     .catch(this.context.setError)
             })
-            .catch(/*set error in context*/)
-
-            //PlantApiService.getUsersPlants(userId)
-              //      .then(this.context.setUsersPlants)
-                //    .catch(/*set error in context*/)
+            .catch(this.context.setError)
     }
 
-    
-
-    render () {
-        return (
-            <button className='removeButton' onClick={this.removeReminder}>
+    render(){
+        return(
+            <button onClick={this.removeReminder}>
                 Remove
             </button>
         )
     }
-
 }

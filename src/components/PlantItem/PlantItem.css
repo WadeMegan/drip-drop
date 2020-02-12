@@ -1,52 +1,52 @@
-.indiv-plant{
-    width:50%;
-    margin-top:20px;
-  }
+.indivPlant {
+  width: 50%;
+  margin-top: 20px;
+}
   
-  .indiv-plant img {
-    width:100%;
-    border-radius:10px;
-  }
+.indivPlant img {
+  width: 100%;
+  border-radius: 10px;
+}
   
-  .indiv-plant button {
-    width:100%;
-    padding: 5px;
-    background-color: #041f3c;
-    color:white;
-    border-radius:10px;
-    font-size: 18px;
+.indivPlant button {
+  width: 100%;
+  padding: 5px;
+  background-color: #041f3c;
+  color: white;
+  border-radius: 10px;
+  font-size: 18px;
 }
 
-.indiv-plant button:hover{
+.indivPlant button:hover {
   cursor: pointer;
 }
 
-.indiv-plant h3{
+.indivPlant h3 {
   font-size: 20px;
   line-height: 22px;
   font-family: 'Sriracha', cursive;
 }
 
 @media only screen and (min-width: 550px) {
-  .indiv-plant{
+  .indivPlant {
     width:40%;
   }
 }
 
 @media only screen and (min-width: 750px) {
-  .indiv-plant{
+  .indivPlant {
     width:30%;
   }
 }
 
 @media only screen and (min-width: 950px) {
-  .indiv-plant{
+  .indivPlant {
     width:25%;
   }
 }
 
 @media only screen and (min-width: 1200px) {
-  .indiv-plant{
+  .indivPlant { 
     width:20%;
   }
 }

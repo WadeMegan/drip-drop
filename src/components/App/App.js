@@ -7,13 +7,10 @@ import LandingPage from '../../routes/LandingPage/LandingPage'
 import RegisterPage from '../../routes/RegisterPage/RegisterPage'
 import SigninPage from '../../routes/SigninPage/SigninPage'
 import AllPlantsPage from '../../routes/AllPlantsPage/AllPlantsPage'
-import HomeGardenPage from '../../routes/HomeGardenPage/HomeGardenPage'
-import dummyStore from '../../store/dummy-store'
+import YourPlantsPage from '../../routes/YourPlantsPage/YourPlantsPage'
+import DirectionsPage from '../../routes/DirectionsPage/DirectionsPage'
 import PrivateRoute from '../../components/Utils/PrivateRoute'
 import PublicOnlyRoute from '../../components/Utils/PublicOnlyRoute'
-import Error from '../../components/Error/Error'
-import DirectionsPage from '../../routes/DirectionsPage/DirectionsPage'
-
 
 class App extends Component {
   
@@ -21,16 +18,6 @@ class App extends Component {
     isLoggedIn: false,
     hasError: false,
   }
-  /*
-  setPlants = (data) => {
-    this.setState({
-      plants: data
-    })
-  }
-  
-  componentWillMount(){
-    this.setPlants(dummyStore)
-  }*/
 
   static getDerivedStateFromError(error){
     console.error(error)
@@ -44,9 +31,7 @@ class App extends Component {
   }
 
   render(){
-    
     return (
-
         <>
         <Nav isLoggedIn={this.state.isLoggedIn}/>
         <main className='App'>
@@ -71,7 +56,7 @@ class App extends Component {
                 />
                 <PrivateRoute 
                   path={'/your-plants'}
-                  component={HomeGardenPage}
+                  component={YourPlantsPage}
                 />
                 <PrivateRoute 
                   path={'/directions'}
@@ -81,7 +66,7 @@ class App extends Component {
         </main>
         <Footer/>
         </>
-    );
+    )
   }
 }
 

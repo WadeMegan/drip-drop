@@ -4,9 +4,7 @@ import './RegistrationForm.css'
 import AuthApiService from '../../services/auth-api-service'
 import PlantListContext from '../../contexts/PlantListContext'
 
-
 export default class RegistrationForm extends Component {
-
     static contextType = PlantListContext
 
     state = {
@@ -15,78 +13,83 @@ export default class RegistrationForm extends Component {
 
     handleSubmit = ev => {
         ev.preventDefault()
-        const { first_name, last_name, phone_number, email, password } = ev.target
+        const { firstName, lastName, phoneNumber, email, password } = ev.target
 
         this.setState({ error: null })
         AuthApiService.postUser({
-            first_name: first_name.value,
-            last_name: last_name.value,
-            phone_number: phone_number.value,
+            first_name: firstName.value,
+            last_name: lastName.value,
+            phone_number: phoneNumber.value,
             email: email.value,
             password: password.value,
         })
             .then(user=>{
-                first_name.value = ''
-                last_name.value = ''
-                phone_number.value = ''
+                firstName.value = ''
+                lastName.value = ''
+                phoneNumber.value = ''
                 email.value = ''
                 password.value = ''
                 this.props.onRegistrationSuccess()
             })
             .catch(res=>{
-                if(res.error === 'Password must contain one upper case, lower case, number'){
+                if(res.error === 'Password must contain one upper case, lower case, and number'){
                     this.setState({error:res.error})
                 }
                 else if(res.error === 'There is already an account associated with this email'){
                     this.setState({error:res.error})
                 }
-                else if(res.error === 'Password be longer than 8 characters'){
+                else if(res.error === 'Password must be longer than 8 characters'){
+                    this.setState({error:res.error})
+                }
+                else if(res.error === 'Password must not start or end with empty spaces'){
+                    this.setState({error:res.error})
+                }
+                else if(res.error === 'Password must be less than 72 characters'){
                     this.setState({error:res.error})
                 }
                 else{
                     this.context.setError(res.error)
                 }
             })
-        
     }
 
     componentDidMount(){
         this.context.clearError()
     }
 
-    render() {
+    render(){
         const { error } = this.state
-        return (
-                <form className='register-form' onSubmit={this.handleSubmit}>
-                    <legend>Create Account</legend>
-                    <div className='formElements'>
-                        <div role='alert' id='error'>
-                            {error && <p>{error}</p>}
-                        </div>
-                        <div>
-                            <label htmlFor="first_name">First name</label>
-                            <input type="text" name='first_name' id='first_name' placeholder='John' required/>
-                        </div>
-                        <div>
-                            <label htmlFor="last_name">Last name</label>
-                            <input type="text" name='last_name' id='last_name' placeholder='Doe' required/>
-                        </div>
-                        <div>
-                            <label htmlFor="phone_number">Phone</label>
-                            <input type="tel" name='phone_number' id='phone_number' placeholder='1112223333' required/>
-                        </div>
-                        <div>
-                            <label htmlFor="email">Email</label>
-                            <input type="text" name='email' id='email' placeholder='johndoe@gmail.com' required/>
-                        </div>
-                        <div>
-                            <label htmlFor="password">Password</label>
-                            <input type="password" name='password' id='password' required/>
-                        </div>
-                        <input className='form-register-button' type='submit' value='Register'/>
-                        <p className='signinLink'>Have an account? <Link to='/signin'>Sign in.</Link></p>
+        return(
+            <form className='registerForm' onSubmit={this.handleSubmit}>
+                <legend>Create Account</legend>
+                <div className='formElements'>
+                    <div role='alert' id='error'>
+                        {error && <p>{error}</p>}
                     </div>
-                </form>
+                    <div>
+                        <label htmlFor="firstName">First name</label>
+                        <input type="text" name='firstName' id='firstName' placeholder='John' required/>
+                    </div>
+                    <div>
+                        <label htmlFor="lastName">Last name</label>
+                        <input type="text" name='lastName' id='lastName' placeholder='Doe' required/>
+                    </div>
+                    <div>
+                        <label htmlFor="phoneNumber">Phone</label>
+                        <input type="tel" name='phoneNumber' id='phoneNumber' placeholder='1112223333' required/>
+                    </div>
+                    <div>
+                        <label htmlFor="email">Email</label>
+                        <input type="text" name='email' id='email' placeholder='johndoe@gmail.com' required/>
+                    </div>
+                    <div>
+                        <label htmlFor="password">Password</label>
+                        <input type="password" name='password' id='password' required/>
+                    </div>
+                    <input className='formRegisterButton' type='submit' value='Register'/>
+                    <p className='signinLink'>Have an account? <Link to='/signin'>Sign in.</Link></p>
+                </div>
+            </form>
         )
     }
 

@@ -18,8 +18,7 @@ const PlantApiService = {
                     : res.json()
             )
     },
-    postNewReminder(plantId,userId){
-
+    postNewReminder(plantId,userId){    
         //adds one day to current day, so sms reminders start the next day
         const newDate = new Date(new Date().getTime()+(1*24*60*60*1000)).toISOString().split('T')[0]
 
@@ -41,18 +40,15 @@ const PlantApiService = {
             )
     }, 
     deleteReminder(plantId,userId){
-
         return fetch(`${config.API_ENDPOINT}/reminders/plants/${plantId}/users/${userId}`,{
             method: 'DELETE'
         })
-
             .then(res =>
                 (!res.ok)
                     ? res.json().then(e=>Promise.reject(e))
                     : res.json()
             )
     }, 
-
 }
 
 export default PlantApiService

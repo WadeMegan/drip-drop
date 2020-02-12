@@ -7,11 +7,10 @@
 
 main {
     margin-top:12vh;
-    padding-bottom:12vh; /*for footer position*/
+    padding-bottom:12vh; 
     min-height:88vh;
 }
 
-/*for footer position*/
 #root {
     position:relative;
 }

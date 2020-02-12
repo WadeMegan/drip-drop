@@ -3,8 +3,8 @@ import './Footer.css'
 
 export default class Nav extends Component {
     
-    render () {
-        return (
+    render(){
+        return(
            <footer>
                Created by Megan Wade
                <ul className='socialLinks'>
