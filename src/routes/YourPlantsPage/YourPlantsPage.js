@@ -73,8 +73,8 @@ export default class YourPlantsPage extends Component {
                     <div className='banner'>
                         <h2>Your Plants</h2>
                         <form className='searchForm'> 
-                            <label htmlFor="searchPlants">Search your plants: </label>
-                            <input type="text" name='searchPlants' id='searchPlants' placeholder="zz plant" onChange={this.filterPlants}/>
+                            <label htmlFor='searchPlants'>Search your plants: </label>
+                            <input type='text' name='searchPlants' id='searchPlants' placeholder='zz plant' onChange={this.filterPlants}/>
                         </form>
                     </div>
                     <div className='yourPlantsContainer'>

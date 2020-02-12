@@ -1,0 +1,111 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should match with snapshot 1`] = `
+<section
+  className="registerSection"
+>
+  <form
+    className="registerForm"
+    onSubmit={[Function]}
+  >
+    <h2
+      className="formTitle"
+    >
+      Create Account
+    </h2>
+    <div
+      className="formElements"
+    >
+      <div
+        id="error"
+        role="alert"
+      />
+      <div>
+        <label
+          htmlFor="firstName"
+        >
+          First name
+        </label>
+        <input
+          id="firstName"
+          name="firstName"
+          placeholder="John"
+          required={true}
+          type="text"
+        />
+      </div>
+      <div>
+        <label
+          htmlFor="lastName"
+        >
+          Last name
+        </label>
+        <input
+          id="lastName"
+          name="lastName"
+          placeholder="Doe"
+          required={true}
+          type="text"
+        />
+      </div>
+      <div>
+        <label
+          htmlFor="phoneNumber"
+        >
+          Phone
+        </label>
+        <input
+          id="phoneNumber"
+          name="phoneNumber"
+          placeholder="1112223333"
+          required={true}
+          type="tel"
+        />
+      </div>
+      <div>
+        <label
+          htmlFor="email"
+        >
+          Email
+        </label>
+        <input
+          id="email"
+          name="email"
+          placeholder="johndoe@gmail.com"
+          required={true}
+          type="text"
+        />
+      </div>
+      <div>
+        <label
+          htmlFor="password"
+        >
+          Password
+        </label>
+        <input
+          id="password"
+          name="password"
+          required={true}
+          type="password"
+        />
+      </div>
+      <input
+        className="formRegisterButton"
+        type="submit"
+        value="Register"
+      />
+      <p
+        className="signinLink"
+      >
+        Have an account? 
+        <a
+          href="/signin"
+          onClick={[Function]}
+        >
+          Sign in.
+        </a>
+      </p>
+    </div>
+  </form>
+</section>
+`;

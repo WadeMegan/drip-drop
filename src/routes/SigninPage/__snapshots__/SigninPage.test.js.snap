@@ -1,0 +1,71 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should match with snapshot 1`] = `
+<section
+  className="signinSection"
+>
+  <form
+    className="signinForm"
+    onSubmit={[Function]}
+  >
+    <h2
+      className="formTitle"
+    >
+      Welcome Back
+    </h2>
+    <div
+      className="formElements"
+    >
+      <p
+        className="demo"
+      >
+        To demo, sign in with email: test@gmail.com and password: password
+      </p>
+      <div
+        id="error"
+        role="alert"
+      />
+      <div>
+        <label
+          htmlFor="username"
+        >
+          Email
+        </label>
+        <input
+          id="username"
+          name="username"
+          type="text"
+        />
+      </div>
+      <div>
+        <label
+          htmlFor="password"
+        >
+          Password
+        </label>
+        <input
+          id="password"
+          name="password"
+          type="password"
+        />
+      </div>
+      <input
+        className="formSigninButton"
+        type="submit"
+        value="Sign In"
+      />
+      <p
+        className="createAccountLink"
+      >
+        New? 
+        <a
+          href="/register"
+          onClick={[Function]}
+        >
+          Create account.
+        </a>
+      </p>
+    </div>
+  </form>
+</section>
+`;

@@ -1,0 +1,167 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should match with snapshot 1`] = `
+Array [
+  <nav>
+    <h1>
+      Drip 
+      <span>
+        <i
+          className="fas fa-tint"
+        />
+      </span>
+       Drop
+    </h1>
+    <a
+      className="navLink"
+      href="/signin"
+      onClick={[Function]}
+    >
+      Sign in
+    </a>
+  </nav>,
+  <main
+    className="App"
+  >
+    <section
+      className="landingPage"
+    >
+      <div
+        className="hero"
+      >
+        <div
+          className="heroText"
+        >
+          <h2>
+            Never kill another plant
+          </h2>
+          <p>
+            Drip Drop is watering made simple. All you have to do is select your plants and we'll send you texts reminding you to water them. It's that easy!
+          </p>
+          <a
+            className="getStarted"
+            href="#directionsSection"
+          >
+            Let's get started!
+          </a>
+        </div>
+      </div>
+      <div
+        className="directionsSection"
+        id="directionsSection"
+      >
+        <h3>
+          Watering Made Simple
+        </h3>
+        <div
+          className="directionsText"
+        >
+          <p>
+            Drip Drop will remind you to water your house plants via text. Here's how to get started:
+          </p>
+          <p>
+            <span
+              className="step"
+            >
+              Step 1
+            </span>
+             Register for an account and sign in. 
+          </p>
+          <div
+            className="demoInfo"
+          >
+            <p>
+              To demo Drip Drop, sign in with email: test@gmail.com and password: password
+            </p>
+          </div>
+          <div
+            className="imgContainer"
+          >
+            <img
+              alt="phone with Drip Drop texts"
+              className="phoneImg"
+              src="phoneImg.jpg"
+            />
+            <p>
+              <span
+                className="step"
+              >
+                Step 2
+              </span>
+               You'll be directed to your plants. These are the plants that Drip Drop will text you about. To select plants, head on over to the available plants and add any you have.
+            </p>
+            <p>
+              <span
+                className="step stepThree"
+              >
+                Step 3
+              </span>
+               Each day, Drip Drop will check if you have any plants that need to be watered. If so, you'll get a reminder text. To stop getting notifications for a plant, simply remove it.
+            </p>
+          </div>
+        </div>
+        <div
+          className="landingPageButtonContainer"
+        >
+          <a
+            className="registerButton"
+            href="/register"
+            onClick={[Function]}
+          >
+            Register Now
+          </a>
+          <p>
+            Or, 
+            <a
+              href="/signin"
+              onClick={[Function]}
+            >
+              sign in.
+            </a>
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>,
+  <footer>
+    Created by Megan Wade
+    <ul
+      className="socialLinks"
+    >
+      <li>
+        <a
+          aria-label="linkedin link"
+          href="https://www.linkedin.com/in/megan-wade-909129124/"
+          target="_blank"
+        >
+          <i
+            className="fab fa-linkedin fa-2x"
+          />
+        </a>
+      </li>
+      <li>
+        <a
+          aria-label="email link"
+          href="mailto:meganwade96@gmail.com"
+          target="_blank"
+        >
+          <i
+            className="fas fa-envelope-square fa-2x"
+          />
+        </a>
+      </li>
+      <li>
+        <a
+          aria-label="github link"
+          href="https://github.com/WadeMegan"
+          target="_blank"
+        >
+          <i
+            className="fab fa-github-square fa-2x"
+          />
+        </a>
+      </li>
+    </ul>
+  </footer>,
+]
+`;

@@ -29,7 +29,7 @@ export default class LandingPage extends Component {
                         </div>
                     </div>
                     <div className='landingPageButtonContainer'> 
-                       <Link to="register" className='registerButton'>Register Now</Link> 
+                       <Link to='register' className='registerButton'>Register Now</Link> 
                        <p>Or, <Link to='signin'>sign in.</Link></p>
                     </div>
                 </div>

@@ -1,0 +1,67 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should match with snapshot 1`] = `
+Array [
+  <div
+    className="switchPagesNav"
+  >
+    <a
+      className="pageButton directionsButton notCurrent"
+      href="/directions"
+      onClick={[Function]}
+    >
+      <p
+        className="buttonItem"
+      >
+        Directions
+      </p>
+    </a>
+    <a
+      className="pageButton availableButton notCurrent"
+      href="/plants"
+      onClick={[Function]}
+    >
+      <p
+        className="buttonItem"
+      >
+        Available Plants
+      </p>
+    </a>
+    <div
+      className="pageButton yourPlantsButton current"
+    >
+      Your Plants
+    </div>
+  </div>,
+  <section
+    className="usersPlantsSection"
+  >
+    <div
+      className="banner"
+    >
+      <h2>
+        Your Plants
+      </h2>
+      <form
+        className="searchForm"
+      >
+        <label
+          htmlFor="searchPlants"
+        >
+          Search your plants: 
+        </label>
+        <input
+          id="searchPlants"
+          name="searchPlants"
+          onChange={[Function]}
+          placeholder="zz plant"
+          type="text"
+        />
+      </form>
+    </div>
+    <div
+      className="yourPlantsContainer"
+    />
+  </section>,
+]
+`;

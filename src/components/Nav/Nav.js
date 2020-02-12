@@ -54,7 +54,7 @@ export default class Nav extends Component {
     render(){
         return (
            <nav>
-               <h1>Drip <span><i className="fas fa-tint"></i></span> Drop</h1>
+               <h1>Drip <span><i className='fas fa-tint'></i></span> Drop</h1>
                {TokenService.hasAuthToken()
                 ? this.renderLogoutLink()
                 : this.renderLoginLink()}

@@ -1,3 +1,45 @@
+# Foodies on Foot
+
+## Live App
+
+A live version of the app can be accessed [here]().
+
+## Summary
+
+Drip Drop is a web application that reminds users to water their houseplants. Users can select the plants they have from a list of common houseplants. Each day, Drip Drop will check to see if any of the user's plants will need to be watered. If so, Drip Drop will send the user a sms message as a reminder. 
+
+### Landing Page: 
+![landing page mobile](https://i.imgur.com/wYWEp4G.png)
+
+### Sign In Page: 
+![sign in page mobile](https://i.imgur.com/Rw7ESe4.png)
+
+### User's Plants Page: 
+![user's page mobile](https://i.imgur.com/7ZAaSh5.png)
+
+### The Sms Messages
+![sms message](https://i.imgur.com/TG2s96F.png)
+
+## Goal
+
+## Technologies Used
+
+### Front End:
+* HTML 
+* CSS
+* JavaScript
+* JQuery
+
+### APIs:
+* Google Maps Geocoder
+* Google Maps Nearby Places
+* Google Maps Distance Matrix
+
+## Browser Compatibility
+
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

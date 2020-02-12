@@ -67,24 +67,24 @@ export default class RegistrationForm extends Component {
                         {error && <p>{error}</p>}
                     </div>
                     <div>
-                        <label htmlFor="firstName">First name</label>
-                        <input type="text" name='firstName' id='firstName' placeholder='John' required/>
+                        <label htmlFor='firstName'>First name</label>
+                        <input type='text' name='firstName' id='firstName' placeholder='John' required/>
                     </div>
                     <div>
-                        <label htmlFor="lastName">Last name</label>
-                        <input type="text" name='lastName' id='lastName' placeholder='Doe' required/>
+                        <label htmlFor='lastName'>Last name</label>
+                        <input type='text' name='lastName' id='lastName' placeholder='Doe' required/>
                     </div>
                     <div>
-                        <label htmlFor="phoneNumber">Phone</label>
-                        <input type="tel" name='phoneNumber' id='phoneNumber' placeholder='1112223333' required/>
+                        <label htmlFor='phoneNumber'>Phone</label>
+                        <input type='tel' name='phoneNumber' id='phoneNumber' placeholder='1112223333' required/>
                     </div>
                     <div>
-                        <label htmlFor="email">Email</label>
-                        <input type="text" name='email' id='email' placeholder='johndoe@gmail.com' required/>
+                        <label htmlFor='email'>Email</label>
+                        <input type='text' name='email' id='email' placeholder='johndoe@gmail.com' required/>
                     </div>
                     <div>
-                        <label htmlFor="password">Password</label>
-                        <input type="password" name='password' id='password' required/>
+                        <label htmlFor='password'>Password</label>
+                        <input type='password' name='password' id='password' required/>
                     </div>
                     <input className='formRegisterButton' type='submit' value='Register'/>
                     <p className='signinLink'>Have an account? <Link to='/signin'>Sign in.</Link></p>

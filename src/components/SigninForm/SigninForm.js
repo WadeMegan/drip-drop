@@ -83,12 +83,12 @@ export default class SigninForm extends Component {
                         {error && <p>{error}</p>}
                     </div>
                     <div>
-                        <label htmlFor="username">Email</label>
-                        <input type="text" name='username' id='username' />
+                        <label htmlFor='username'>Email</label>
+                        <input type='text' name='username' id='username' />
                     </div>
                     <div>
-                        <label htmlFor="password">Password</label>
-                        <input type="password" name='password' id='password' />
+                        <label htmlFor='password'>Password</label>
+                        <input type='password' name='password' id='password' />
                     </div>
                     <input className='formSigninButton' type='submit' value='Sign In'/>
                     <p className='createAccountLink'>New? <Link to='/register'>Create account.</Link></p>
