@@ -1,4 +1,5 @@
 import config from '../config'
+import 'whatwg-fetch'; 
 
 const AuthApiService = {
     postLogin({user_name, password}){

@@ -1,4 +1,5 @@
 import config from '../config'
+import 'whatwg-fetch'; 
 
 const PlantApiService = {
     getAllPlants(){
