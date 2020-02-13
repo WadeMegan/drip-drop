@@ -1,8 +1,8 @@
-# Foodies on Foot
+# Drip Drop
 
 ## Live App
 
-A live version of the app can be accessed [here]().
+A live version of the app can be accessed [here](https://drip-drop.now.sh/).
 
 To demo Drip Drop, log in with:
 * Email: test@gmail.com
@@ -21,13 +21,15 @@ Drip Drop is a web application that reminds users to water their houseplants. Us
 ### User's Plants Page: 
 ![user's page mobile](https://i.imgur.com/7ZAaSh5.png)
 
-### The Sms Messages
-![sms](https://i.imgur.com/TG2s96F.png)
+### The SMS Messages
+![sms](https://i.imgur.com/k3GWyfJ.jpg)
 
 ## Technologies Used
 
 ### Front End: 
 * ReactJS
+* jQuery
+* HTML
 * CSS
 
 ### Back End: 
@@ -37,17 +39,11 @@ Drip Drop is a web application that reminds users to water their houseplants. Us
 
 ### APIs:
 * Twilio
+* Drip Drop API ([documentation](https://github.com/WadeMegan/drip-drop-api))
 
 ## Associated Repositories
 
-This is the repository for Drip Drop's client. The repository for Drip Drop's server can be found [here](https://github.com/WadeMegan/drip-drop-api). A third repository, which holds the files responsible for sending sms messages, can be found [here](https://github.com/WadeMegan/drip-drop-send-sms). These repositories are outlined below: 
+This is the repository for Drip Drop's client. The repository for Drip Drop's server can be found [here](https://github.com/WadeMegan/drip-drop-api). A third repository, which holds the file responsible for sending sms messages, can be found [here](https://github.com/WadeMegan/drip-drop-send-sms). 
 
-### [drip-drop-api](https://github.com/WadeMegan/drip-drop-api)
-
-
-
-### [drip-drop-send-sms](https://github.com/WadeMegan/drip-drop-send-sms)
-
-drip-drop-send-sms is built using Node. The file send-sms.js, uses the node-fetch package to make a GET request to the Drip Drop API sms endpoint. It then iterates through the sms list to check if the reminder date is equal to the current date. If so, it uses the Twilio API to send a reminder message to the user. If a text is sent, the reminder date is updated so that the user will recieve another message when the plant needs to be watered again. drip-drop-send-sms is deployed on Heroku and using Heroku's built in scheduler, send-sms.js is run once per day every day.
 
 
