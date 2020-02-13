@@ -10,6 +10,7 @@ export default class Nav extends Component {
         loggedIn: null,
     }
 
+    // when user clicks logout link, clear the auth token and user token and set loggedIn to false
     handleLogoutClick = () => {
         TokenService.clearAuthToken()
         UserService.clearUserToken()
@@ -18,12 +19,8 @@ export default class Nav extends Component {
         })
     }
 
-    handleSuccessfulLogin = () => {
-        this.setState({
-            loggedIn:true
-        })
-    }
-
+    // Nav component receives isLoggedIn App component state as a prop
+    // if isLoggedIn is true, meaning a user has logged in, setState loggedIn to true
     componentWillReceiveProps(nextProps){
         if(nextProps.isLoggedIn){
             this.setState({
@@ -32,6 +29,7 @@ export default class Nav extends Component {
         }
     }
 
+    // if loggedIn state is true, render logout link
     renderLogoutLink(){
         return(
             <Link
@@ -42,6 +40,7 @@ export default class Nav extends Component {
         )
     }
 
+    // if loggedIn state is false, render login link
     renderLoginLink(){
         return(
             <Link

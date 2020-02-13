@@ -12,6 +12,7 @@ export default class SigninPage extends Component {
         this.context.clearError()
     }
 
+    // has been passed onLogin props from App component and is passing to SigninForm component
     render() {
         return (
             <Error>

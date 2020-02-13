@@ -15,7 +15,7 @@ import PublicOnlyRoute from '../../components/Utils/PublicOnlyRoute'
 class App extends Component {
   
   state = {
-    isLoggedIn: false,
+    isLoggedIn: false, // will be passed to Nav component to render different links based on logged in or not
     hasError: false,
   }
 
@@ -24,6 +24,9 @@ class App extends Component {
     return {hasError:true}
   }
 
+  // will be passed to SigninPage and then SigninForm as props
+  // upon successful login, will set state isLoggedIn to true
+  // necessary for rendering different links in Nav
   handleLogin=()=>{
       this.setState({
         isLoggedIn:true

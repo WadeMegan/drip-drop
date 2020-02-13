@@ -2,6 +2,7 @@ import React, {Component} from 'react'
 import PlantListContext from '../../contexts/PlantListContext'
 import './Error.css'
 
+//Error boundary
 class Error extends Component {
     static contextType = PlantListContext
 

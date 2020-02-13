@@ -32,6 +32,9 @@
 #searchPlants {
   border:1px solid grey;
   font-size:16px;
+  height:22px;
+  position: relative;
+  line-height:22px;
 }
   
 .switchPagesButton {
@@ -105,4 +108,29 @@
   .searchForm input {
     width:20%;
   }
+}
+
+.clearButton {
+  border-radius: 50%;
+  height:18px;
+  width:18px;
+  position: relative;
+  right: 20px;
+  bottom: 1px;
+  background-color: #041f3c;
+  color:white;
+  font-size: 14px;
+  line-height:18px;
+}
+
+.clearButton:hover {
+  cursor: pointer;
+}
+
+#searchPlants:invalid ~ .clearButton {
+	display: none;
+}
+
+#searchPlants:valid ~ .clearButton {
+  display: inline-block;
 }

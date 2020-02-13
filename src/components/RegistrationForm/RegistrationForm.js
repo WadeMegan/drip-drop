@@ -11,11 +11,14 @@ export default class RegistrationForm extends Component {
         error: null
     }
 
+    // on registration form submit ... 
     handleSubmit = ev => {
         ev.preventDefault()
         const { firstName, lastName, phoneNumber, email, password } = ev.target
 
         this.setState({ error: null })
+        
+        //makes POST request to Drip Drop API's users endpoint to create new user
         AuthApiService.postUser({
             first_name: firstName.value,
             last_name: lastName.value,
@@ -29,9 +32,12 @@ export default class RegistrationForm extends Component {
                 phoneNumber.value = ''
                 email.value = ''
                 password.value = ''
+                // calls this.props.onRegistration success which was passed down from RegisterPage component
+                // will redirect user to login page
                 this.props.onRegistrationSuccess()
             })
             .catch(res=>{
+                // if the error equals the validation errors possibly from the endpoint, setState to show error to user
                 if(res.error === 'Password must contain one upper case, lower case, and number'){
                     this.setState({error:res.error})
                 }
@@ -47,6 +53,7 @@ export default class RegistrationForm extends Component {
                 else if(res.error === 'Password must be less than 72 characters'){
                     this.setState({error:res.error})
                 }
+                // if other error, set context error to show error boundary
                 else{
                     this.context.setError(res.error)
                 }

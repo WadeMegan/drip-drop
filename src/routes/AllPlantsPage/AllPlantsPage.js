@@ -15,6 +15,8 @@ export default class AllPlantsPage extends Component {
         filteredPlants: []
     }
 
+    // if usersPlants or plantList is empty, makes GET requests to the appropriate endpoints 
+    // necessary for page refreshes
     componentDidMount=()=>{
         this.context.clearError()
         const userId = UserService.getUserToken()
@@ -32,13 +34,21 @@ export default class AllPlantsPage extends Component {
         }
     }
 
-
+    // renders plants
+    // if state isFiltered is false, will render this.context.plantList
+    // if state isFiltered is true, will render this.state.filteredPlants
     renderPlants=(plants)=>{
         return plants.map(plant =>
             <PlantItem key={plant.id} plant={plant}/>
         ) 
     }
 
+    // if user presses enter on search bar, will prevent redirecting
+    handleSubmitSearch = ev => {
+        ev.preventDefault()
+    }
+
+    // if user types in search bar, will set isFiltered state to true and will filter array of plants
     filterPlants = (event) => {
 
         let clonedArray = JSON.parse(JSON.stringify(this.context.plantList))
@@ -71,9 +81,10 @@ export default class AllPlantsPage extends Component {
                 <section className='availablePlantsSection'>
                     <div className='banner'>
                         <h2>Available Plants</h2>
-                        <form className='searchForm'> 
+                        <form className='searchForm' onSubmit={this.handleSubmitSearch}> 
                             <label htmlFor='searchPlants'>Search all plants: </label>
-                            <input type='text' name='searchPlants' id='searchPlants' placeholder='zz plant' onChange={this.filterPlants}/>
+                            <input type='text' name='searchPlants' id='searchPlants' placeholder='zz plant' required onChange={this.filterPlants}/>
+                            <button className='clearButton' type='reset' onClick={this.filterPlants}>X</button>
                         </form>
                     </div>
                     <div className='allPlantsContainer'>
