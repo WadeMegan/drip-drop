@@ -44,6 +44,7 @@ Array [
       </h2>
       <form
         className="searchForm"
+        onSubmit={[Function]}
       >
         <label
           htmlFor="searchPlants"
@@ -55,8 +56,16 @@ Array [
           name="searchPlants"
           onChange={[Function]}
           placeholder="zz plant"
+          required={true}
           type="text"
         />
+        <button
+          className="clearButton"
+          onClick={[Function]}
+          type="reset"
+        >
+          X
+        </button>
       </form>
     </div>
     <div
